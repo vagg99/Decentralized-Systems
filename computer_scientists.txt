@@ -1,3 +1,4 @@
+A
 Atta ur Rehman Khan - https://en.wikipedia.org/wiki/Atta_ur_Rehman_Khan
 Wil van der Aalst - https://en.wikipedia.org/wiki/Wil_van_der_Aalst
 Scott Aaronson - https://en.wikipedia.org/wiki/Scott_Aaronson
@@ -21,6 +22,7 @@ Sanjeev Arora - https://en.wikipedia.org/wiki/Sanjeev_Arora
 Winifred Asprey - https://en.wikipedia.org/wiki/Winifred_Asprey
 John Vincent Atanasoff - https://en.wikipedia.org/wiki/John_Vincent_Atanasoff
 Shakuntala Atre - https://en.wikipedia.org/wiki/Shakuntala_Atre
+B
 Charles Babbage - https://en.wikipedia.org/wiki/Charles_Babbage
 Charles Bachman - https://en.wikipedia.org/wiki/Charles_Bachman
 Roland Carl Backhouse - https://en.wikipedia.org/wiki/Roland_Carl_Backhouse
@@ -74,6 +76,7 @@ Fred Brooks - https://en.wikipedia.org/wiki/Fred_Brooks
 Rod Brooks - https://en.wikipedia.org/wiki/Rod_Brooks
 Margaret Burnett - https://en.wikipedia.org/wiki/Margaret_Burnett
 Michael Butler (computer scientist) - https://en.wikipedia.org/wiki/Michael_Butler_(computer_scientist)
+C
 Pino Caballero Gil - https://en.wikipedia.org/wiki/Pino_Caballero_Gil
 Tracy Camp - https://en.wikipedia.org/wiki/Tracy_Camp
 Martin Campbell-Kelly - https://en.wikipedia.org/wiki/Martin_Campbell-Kelly
@@ -117,6 +120,7 @@ Jon Crowcroft - https://en.wikipedia.org/wiki/Jon_Crowcroft
 W. Bruce Croft - https://en.wikipedia.org/wiki/W._Bruce_Croft
 Glen Culler - https://en.wikipedia.org/wiki/Glen_Culler
 Haskell Curry - https://en.wikipedia.org/wiki/Haskell_Curry
+D
 Luigi Dadda - https://en.wikipedia.org/wiki/Luigi_Dadda
 Ole-Johan Dahl - https://en.wikipedia.org/wiki/Ole-Johan_Dahl
 Ryan Dahl - https://en.wikipedia.org/wiki/Ryan_Dahl
@@ -148,6 +152,7 @@ Susan Dumais - https://en.wikipedia.org/wiki/Susan_Dumais
 Adam Dunkels - https://en.wikipedia.org/wiki/Adam_Dunkels
 Jon Michael Dunn - https://en.wikipedia.org/wiki/Jon_Michael_Dunn
 Schahram Dustdar - https://en.wikipedia.org/wiki/Schahram_Dustdar
+E
 Peter Eades - https://en.wikipedia.org/wiki/Peter_Eades
 Annie Easley - https://en.wikipedia.org/wiki/Annie_Easley
 Wim Ebbinkhuijsen - https://en.wikipedia.org/wiki/Wim_Ebbinkhuijsen
@@ -165,6 +170,7 @@ Oren Etzioni - https://en.wikipedia.org/wiki/Oren_Etzioni
 Christopher Riche Evans - https://en.wikipedia.org/wiki/Christopher_Riche_Evans
 David C. Evans - https://en.wikipedia.org/wiki/David_C._Evans
 Shimon Even - https://en.wikipedia.org/wiki/Shimon_Even
+F
 Scott Fahlman - https://en.wikipedia.org/wiki/Scott_Fahlman
 Edward Feigenbaum - https://en.wikipedia.org/wiki/Edward_Feigenbaum
 Edward Felten - https://en.wikipedia.org/wiki/Edward_Felten
@@ -192,6 +198,7 @@ Ping Fu - https://en.wikipedia.org/wiki/Ping_Fu
 Xiaoming Fu - https://en.wikipedia.org/wiki/Xiaoming_Fu
 Kunihiko Fukushima - https://en.wikipedia.org/wiki/Kunihiko_Fukushima
 D. R. Fulkerson - https://en.wikipedia.org/wiki/D._R._Fulkerson
+G
 Richard P. Gabriel - https://en.wikipedia.org/wiki/Richard_P._Gabriel
 Zvi Galil - https://en.wikipedia.org/wiki/Zvi_Galil
 Bernard Galler - https://en.wikipedia.org/wiki/Bernard_Galler
@@ -240,6 +247,7 @@ Neil J. Gunther - https://en.wikipedia.org/wiki/Neil_J._Gunther
 Jürg Gutknecht - https://en.wikipedia.org/wiki/J%C3%BCrg_Gutknecht
 Michael Guy - https://en.wikipedia.org/wiki/Michael_Guy
 Robert Griesemer - https://en.wikipedia.org/wiki/Robert_Griesemer
+H
 Nico Habermann - https://en.wikipedia.org/wiki/Nico_Habermann
 Philipp Matthäus Hahn - https://en.wikipedia.org/wiki/Philipp_Matth%C3%A4us_Hahn
 Eldon C. Hall - https://en.wikipedia.org/wiki/Eldon_C._Hall
@@ -283,11 +291,13 @@ John Hughes (computer scientist) - https://en.wikipedia.org/wiki/John_Hughes_(co
 Roger Hui - https://en.wikipedia.org/wiki/Roger_Hui
 Watts Humphrey - https://en.wikipedia.org/wiki/Watts_Humphrey
 Sandra Hutchins - https://en.wikipedia.org/wiki/Sandra_Hutchins
+I
 Jean Ichbiah - https://en.wikipedia.org/wiki/Jean_Ichbiah
 Roberto Ierusalimschy - https://en.wikipedia.org/wiki/Roberto_Ierusalimschy
 Dan Ingalls - https://en.wikipedia.org/wiki/Dan_Ingalls
 Mary Jane Irwin - https://en.wikipedia.org/wiki/Mary_Jane_Irwin
 Kenneth E. Iverson - https://en.wikipedia.org/wiki/Kenneth_E._Iverson
+J
 Ivar Jacobson - https://en.wikipedia.org/wiki/Ivar_Jacobson
 Anil K. Jain (computer scientist, born 1948) - https://en.wikipedia.org/wiki/Anil_K._Jain_(computer_scientist,_born_1948)
 Ramesh Jain - https://en.wikipedia.org/wiki/Ramesh_Jain
@@ -300,6 +310,7 @@ Mathai Joseph - https://en.wikipedia.org/wiki/Mathai_Joseph
 Aravind K. Joshi - https://en.wikipedia.org/wiki/Aravind_K._Joshi
 Bill Joy - https://en.wikipedia.org/wiki/Bill_Joy
 Dan Jurafsky - https://en.wikipedia.org/wiki/Dan_Jurafsky
+K
 William Kahan - https://en.wikipedia.org/wiki/William_Kahan
 Robert E. Kahn - https://en.wikipedia.org/wiki/Robert_E._Kahn
 Avinash Kak - https://en.wikipedia.org/wiki/Avinash_Kak
@@ -335,6 +346,7 @@ John Krogstie - https://en.wikipedia.org/wiki/John_Krogstie
 Joseph Kruskal - https://en.wikipedia.org/wiki/Joseph_Kruskal
 Maarja Kruusmaa - https://en.wikipedia.org/wiki/Maarja_Kruusmaa
 Thomas E. Kurtz - https://en.wikipedia.org/wiki/Thomas_E._Kurtz
+L
 Richard E. Ladner - https://en.wikipedia.org/wiki/Richard_E._Ladner
 Monica S. Lam - https://en.wikipedia.org/wiki/Monica_S._Lam
 Leslie Lamport - https://en.wikipedia.org/wiki/Leslie_Lamport
@@ -369,6 +381,7 @@ Ada Lovelace - https://en.wikipedia.org/wiki/Ada_Lovelace
 David Luckham - https://en.wikipedia.org/wiki/David_Luckham
 Eugene Luks - https://en.wikipedia.org/wiki/Eugene_Luks
 Nancy Lynch - https://en.wikipedia.org/wiki/Nancy_Lynch
+M
 Nadia Magnenat Thalmann - https://en.wikipedia.org/wiki/Nadia_Magnenat_Thalmann
 Tom Maibaum - https://en.wikipedia.org/wiki/Tom_Maibaum
 Simon Marlow - https://en.wikipedia.org/wiki/Simon_Marlow
@@ -416,6 +429,7 @@ Stephen Muggleton - https://en.wikipedia.org/wiki/Stephen_Muggleton
 Klaus-Robert Müller - https://en.wikipedia.org/wiki/Klaus-Robert_M%C3%BCller
 Alan Mycroft - https://en.wikipedia.org/wiki/Alan_Mycroft
 Brad A. Myers - https://en.wikipedia.org/wiki/Brad_A._Myers
+N
 Mihai Nadin - https://en.wikipedia.org/wiki/Mihai_Nadin
 Makoto Nagao - https://en.wikipedia.org/wiki/Makoto_Nagao
 Frieder Nake - https://en.wikipedia.org/wiki/Frieder_Nake
@@ -441,6 +455,7 @@ Donald Norman - https://en.wikipedia.org/wiki/Donald_Norman
 Peter Norvig - https://en.wikipedia.org/wiki/Peter_Norvig
 George Novacky - https://en.wikipedia.org/wiki/George_Novacky
 Kristen Nygaard - https://en.wikipedia.org/wiki/Kristen_Nygaard
+O
 Martin Odersky - https://en.wikipedia.org/wiki/Martin_Odersky
 Peter O'Hearn - https://en.wikipedia.org/wiki/Peter_O%27Hearn
 T. William Olle - https://en.wikipedia.org/wiki/T._William_Olle
@@ -450,6 +465,7 @@ John O'Sullivan (engineer) - https://en.wikipedia.org/wiki/John_O%27Sullivan_(en
 John Ousterhout - https://en.wikipedia.org/wiki/John_Ousterhout
 Mark Overmars - https://en.wikipedia.org/wiki/Mark_Overmars
 Susan Owicki - https://en.wikipedia.org/wiki/Susan_Owicki
+P
 Larry Page - https://en.wikipedia.org/wiki/Larry_Page
 Sankar Pal - https://en.wikipedia.org/wiki/Sankar_Pal
 Paritosh Pandya - https://en.wikipedia.org/wiki/Paritosh_Pandya
@@ -481,6 +497,7 @@ Emil Post - https://en.wikipedia.org/wiki/Emil_Post
 Jon Postel - https://en.wikipedia.org/wiki/Jon_Postel
 Franco Preparata - https://en.wikipedia.org/wiki/Franco_Preparata
 William H. Press - https://en.wikipedia.org/wiki/William_H._Press
+R
 Rapelang Rabana - https://en.wikipedia.org/wiki/Rapelang_Rabana
 Grzegorz Rozenberg - https://en.wikipedia.org/wiki/Grzegorz_Rozenberg
 Michael O. Rabin - https://en.wikipedia.org/wiki/Michael_O._Rabin
@@ -513,6 +530,7 @@ Steven Rudich - https://en.wikipedia.org/wiki/Steven_Rudich
 Jeff Rulifson - https://en.wikipedia.org/wiki/Jeff_Rulifson
 James Rumbaugh - https://en.wikipedia.org/wiki/James_Rumbaugh
 Peter Ružička - https://en.wikipedia.org/wiki/Peter_Ru%C5%BEi%C4%8Dka
+S
 George Sadowsky - https://en.wikipedia.org/wiki/George_Sadowsky
 Mehrnoosh Sadrzadeh - https://en.wikipedia.org/wiki/Mehrnoosh_Sadrzadeh
 Umar Saif - https://en.wikipedia.org/wiki/Umar_Saif
@@ -581,6 +599,7 @@ Bert Sutherland - https://en.wikipedia.org/wiki/Bert_Sutherland
 Ivan Sutherland - https://en.wikipedia.org/wiki/Ivan_Sutherland
 Latanya Sweeney - https://en.wikipedia.org/wiki/Latanya_Sweeney
 Mario Szegedy - https://en.wikipedia.org/wiki/Mario_Szegedy
+T
 Parisa Tabriz - https://en.wikipedia.org/wiki/Parisa_Tabriz
 Roberto Tamassia - https://en.wikipedia.org/wiki/Roberto_Tamassia
 Andrew S. Tanenbaum - https://en.wikipedia.org/wiki/Andrew_S._Tanenbaum
@@ -612,7 +631,9 @@ John Tukey - https://en.wikipedia.org/wiki/John_Tukey
 Alan Turing - https://en.wikipedia.org/wiki/Alan_Turing
 David Turner (computer scientist) - https://en.wikipedia.org/wiki/David_Turner_(computer_scientist)
 Murray Turoff - https://en.wikipedia.org/wiki/Murray_Turoff
+U
 Jeffrey D. Ullman - https://en.wikipedia.org/wiki/Jeffrey_D._Ullman
+V
 Leslie Valiant - https://en.wikipedia.org/wiki/Leslie_Valiant
 Vladimir Vapnik - https://en.wikipedia.org/wiki/Vladimir_Vapnik
 Moshe Vardi - https://en.wikipedia.org/wiki/Moshe_Vardi
@@ -627,6 +648,7 @@ Paul Vitanyi - https://en.wikipedia.org/wiki/Paul_Vitanyi
 Andrew Viterbi - https://en.wikipedia.org/wiki/Andrew_Viterbi
 Jeffrey Scott Vitter - https://en.wikipedia.org/wiki/Jeffrey_Scott_Vitter
 Paul Vixie - https://en.wikipedia.org/wiki/Paul_Vixie
+W
 Eiiti Wada - https://en.wikipedia.org/wiki/Eiiti_Wada
 David A. Wagner - https://en.wikipedia.org/wiki/David_A._Wagner
 David Waltz - https://en.wikipedia.org/wiki/David_Waltz
@@ -667,12 +689,14 @@ Beatrice Helen Worsley - https://en.wikipedia.org/wiki/Beatrice_Helen_Worsley
 Steve Wozniak - https://en.wikipedia.org/wiki/Steve_Wozniak
 Jie Wu - https://en.wikipedia.org/wiki/Jie_Wu
 William Wulf - https://en.wikipedia.org/wiki/William_Wulf
+Y
 Mihalis Yannakakis - https://en.wikipedia.org/wiki/Mihalis_Yannakakis
 Andrew Chi-Chih Yao - https://en.wikipedia.org/wiki/Andrew_Chi-Chih_Yao
 John Yen - https://en.wikipedia.org/wiki/John_Yen
 Nobuo Yoneda - https://en.wikipedia.org/wiki/Nobuo_Yoneda
 Edward Yourdon - https://en.wikipedia.org/wiki/Edward_Yourdon
 Moti Yung - https://en.wikipedia.org/wiki/Moti_Yung
+Z
 Lotfi Zadeh - https://en.wikipedia.org/wiki/Lotfi_Zadeh
 Hans Zantema - https://en.wikipedia.org/wiki/Hans_Zantema
 Arif Zaman - https://en.wikipedia.org/wiki/Arif_Zaman
