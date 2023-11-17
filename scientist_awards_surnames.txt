@@ -1,2 +1,15 @@
 Khan - 10
 Aalst - 0
+Aaronson - 4
+Abebe - 3
+Abelson - 1
+Abiteboul - 4
+Abramsky - 4
+Adleman - 2
+Agrawal - 9
+Ahn - 3
+Aho - 7
+Allen - 6
+Amdahl - 4
+Anderson - 5
+Anthony - 6
