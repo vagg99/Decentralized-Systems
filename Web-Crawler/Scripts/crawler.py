@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-# Define the URL of the Wikipedia page
 url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
 
 response = requests.get(url)
@@ -128,7 +127,7 @@ if response.status_code == 200:
                             else:
                                 print(f"Failed to retrieve the page for {scientist_url}. Status code: {response.status_code}")
 
-                            # Add a sleep interval to avoid overwhelming the server
+                            # sleep interval to avoid overwhelming the server
                             time.sleep(1)
 
                         except Exception as e:
