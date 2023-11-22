@@ -1,17 +1,29 @@
 import requests
 from bs4 import BeautifulSoup
 import time
+import os
 
 url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
 
 response = requests.get(url)
+
+# Get the directory of the current script
+current_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Define the output directory path relative to the current script
+output_directory = os.path.join(current_directory, "..", "Text-Outputs")
+
+# Define the path for the output file
+output_file_path = os.path.join(output_directory, "scientist_info.txt")
 
 if response.status_code == 200:
     # Parse the HTML content of the page using BeautifulSoup
     soup = BeautifulSoup(response.text, "html.parser")
 
     # Create a text file to store the surnames, awards, and education information
-    with open("scientist_info.txt", "w", encoding="utf-8") as info_file:
+    with open(output_file_path, "w", encoding="utf-8") as info_file:
+    # Rest of your code
+
         inside_valid_section = False
         current_letter = ""
 
