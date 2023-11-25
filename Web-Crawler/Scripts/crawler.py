@@ -17,13 +17,11 @@ output_directory = os.path.join(current_directory, "..", "Text-Outputs")
 output_file_path = os.path.join(output_directory, "scientist_info.txt")
 
 if response.status_code == 200:
-    # Parse the HTML content of the page using BeautifulSoup
+    # HTML parser 
     soup = BeautifulSoup(response.text, "html.parser")
 
     # Create a text file to store the surnames, awards, and education information
     with open(output_file_path, "w", encoding="utf-8") as info_file:
-    # Rest of your code
-
         inside_valid_section = False
         current_letter = ""
 
@@ -34,7 +32,8 @@ if response.status_code == 200:
                 if section_title and section_title.text.isalpha() and len(section_title.text) == 1:
                     inside_valid_section = True
                     current_letter = section_title.text
-                    info_file.write("--------------------------\n> Surnames under letter: " + current_letter + "\n--------------------------\n\n" )  # Write the current letter
+                    # Write the current letter
+                    info_file.write("--------------------------\n> Surnames under letter: " + current_letter + "\n--------------------------\n\n" )  
 
                 else:
                     inside_valid_section = False
@@ -45,12 +44,16 @@ if response.status_code == 200:
                     if link:
                         scientist_url = f"https://en.wikipedia.org{link.get('href')}"
                         try:
-                            # Send an HTTP GET request to the scientist's Wikipedia page with a timeout
+                            # HTTP GET request
                             response = requests.get(scientist_url, timeout=10)
 
                             if response.status_code == 200:
-                                # Parse the HTML content of the scientist's page using BeautifulSoup
+                                # HTML parser
                                 scientist_soup = BeautifulSoup(response.text, "html.parser")
+
+                                #########################################################
+                                # SURNAME
+                                #########################################################
 
                                 # Find the scientist's name from the page
                                 name = scientist_soup.find("h1", class_="firstHeading").text
@@ -59,7 +62,7 @@ if response.status_code == 200:
                                 names = name.split()
                                 surname = None
 
-                                # Extracting surname using the logic from the second snippet
+                                # Match the surname with the section letter
                                 for name in names:
                                     if name.startswith(current_letter):
                                         surname = name
@@ -76,8 +79,13 @@ if response.status_code == 200:
                                 if surname is None:
                                     surname = names[-1]
 
+                                #########################################################
+                                # AWARDS
+                                #########################################################
+
                                 # Find the "Awards" section inside the infobox biography vcard
                                 infobox = scientist_soup.find("table", class_="infobox biography vcard")
+                                # by default, the awards count is 0
                                 awards_count = 0
 
                                 if infobox:
@@ -94,6 +102,10 @@ if response.status_code == 200:
                                         awards_list = awards_section.find_next("ul")
                                         if awards_list:
                                             awards_count = len(awards_list.find_all("li"))
+
+                                #########################################################
+                                # EDUCATION
+                                #########################################################
 
                                 # Find the education section
                                 education_section = scientist_soup.find("span", {"id": lambda x: x and "education" in x.lower()})
