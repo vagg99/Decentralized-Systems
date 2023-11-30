@@ -14,7 +14,10 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 output_directory = os.path.join(current_directory, "..", "Text-Outputs")
 
 # Define the path for the output file
-output_file_path = os.path.join(output_directory, "scientist_info.txt")
+output_file_path = os.path.join(output_directory, "scientist_BA_info.txt")
+
+# keywords for education
+education_keywords = ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]
 
 if response.status_code == 200:
     # HTML parser 
@@ -24,6 +27,8 @@ if response.status_code == 200:
     with open(output_file_path, "w", encoding="utf-8") as info_file:
         inside_valid_section = False
         current_letter = ""
+        error_count = 0
+        scientists_count = 0
 
         for element in soup.find_all(["h2", "ul", "li"]):
             if element.name == "h2":
@@ -79,6 +84,13 @@ if response.status_code == 200:
                                 if surname is None:
                                     surname = names[-1]
 
+                                # Handle single-letter surnames
+                                if len(surname) == 2 and surname[1] == '.':
+                                    for name in names:
+                                        if len(name) > 1 and name.startswith(current_letter):
+                                            surname = name
+                                            break
+
                                 #########################################################
                                 # AWARDS
                                 #########################################################
@@ -106,37 +118,70 @@ if response.status_code == 200:
                                 #########################################################
                                 # EDUCATION
                                 #########################################################
-                                education_text = ""
+                                education_text = "-no data-"
 
-                                # education text manifested through
-                                if not education_text:
-                                    # Look for the education in infobox under "Alma mater" label
-                                    infobox_alma_mater_label = infobox.find("th", text="Alma\xa0mater")
-                                    if infobox_alma_mater_label:
-                                        education_text = infobox_alma_mater_label.find_next("td").get_text(separator=" ", strip=True)
-                                    else:
-                                        # If "Alma mater" is not found, look for "Institutions" in the infobox
-                                        infobox_institutions_label = infobox.find("th", {"scope": "row", "class": "infobox-label"}, text="Institutions")
-                                        if infobox_institutions_label:
-                                            education_text = infobox_institutions_label.find_next("td").get_text(separator=" ", strip=True)
-                                        else:
-                                            # If neither "Alma mater" nor "Institutions" is found, look for "Education" in the infobox
-                                            infobox_education_label = infobox.find("th", {"scope": "row", "class": "infobox-label"}, text="Education")
-                                            if infobox_education_label:
-                                                    education_text = infobox_education_label.find_next("td").get_text(separator=" ", strip=True)
+                                # Look for the education in infobox under different labels
+                                labels_to_search = ["Alma\xa0mater", "Education", "Institutions"]
+
+                                for label in labels_to_search:
+                                    label_element = infobox.find("th", text=label)
+                                    if label_element:
+                                        education_element = label_element.find_next("td")
+                                        if education_element:
+                                            # Check if the education contains reference class
+                                            if education_element.find(class_="reference"):
+                                                continue  # Skip elements with the reference class
+                                            
+                                            if education_element.find("ul"):
+                                                # For <ul><li> structure
+                                                education_list = education_element.find_all("li")
+                                                for edu_item in education_list:
+                                                    edu_text = edu_item.get_text(separator=" ", strip=True)
+                                                    if any(keyword in edu_text for keyword in education_keywords):
+                                                        education_text = edu_text.split("(")[0]
+                                                        education_text += " (Bachelor's degree content removed)"
+                                                        break
+                                                else:
+                                                    education_text = education_list[0].get_text(separator=" ", strip=True).split("(")[0]
+                                                break
+                                            else:
+                                                # For linked institutions within <td>
+                                                education_links = education_element.find_all("a")
+                                                for edu_link in education_links:
+                                                    edu_text = edu_link.get_text(strip=True)
+                                                    if any(keyword in edu_text for keyword in education_keywords):
+                                                        education_text = edu_text.split("(")[0]
+                                                        break
+                                                else:
+                                                    education_text = education_links[0].get_text(strip=True).split("(")[0]
+                                                break
+                                    # subcase for plain text university name
+                                    if education_text == "-no data-":
+                                        plain_text_education = infobox.find("td", class_="infobox-data")
+                                        if plain_text_education:
+                                            edu_text = plain_text_education.get_text(strip=True)
+                                            if any(keyword in edu_text for keyword in education_keywords):
+                                                education_text = edu_text.split("(")[0]
+
 
                                 # Write the scientist's surname, awards count, and education text to the text file
                                 info_file.write(f"Surname: {surname}\nAwards: {awards_count}\nEducation: {education_text}\n\n")
+                                scientists_count += 1
 
                             else:
                                 print(f"Failed to retrieve the page for {scientist_url}. Status code: {response.status_code}")
 
                             # sleep interval to avoid overwhelming the server
                             time.sleep(1)
-
+                        
                         except Exception as e:
-                            print(f"An error occurred while processing {scientist_url}: {str(e)}")
+                            error_count += 1
+                            print(f"{error_count}) An error occurred while processing {scientist_url}: {str(e)}")
 
-    print("Information including surnames, awards, and education has been scraped and saved to scientist_info.txt.")
+        # Write the total number of scientists and excluded count to the file
+        info_file.write(f"\nTotal Scientists Included: {scientists_count}\n")
+        info_file.write(f"{error_count} scientists excluded from the final list, due to not meeting the data criteria\n")
+        
+    print("Information including surnames, awards, and education has been scraped and saved to scientist_BA_info.txt.")
 else:
     print("Failed to retrieve the web page. Status code:", response.status_code)

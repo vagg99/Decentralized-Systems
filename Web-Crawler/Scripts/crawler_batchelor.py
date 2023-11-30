@@ -14,7 +14,7 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 output_directory = os.path.join(current_directory, "..", "Text-Outputs")
 
 # Define the path for the output file
-output_file_path = os.path.join(output_directory, "scientist_info.txt")
+output_file_path = os.path.join(output_directory, "old_scientist_BA_info.txt")
 
 if response.status_code == 200:
     # HTML parser 
@@ -106,25 +106,43 @@ if response.status_code == 200:
                                 #########################################################
                                 # EDUCATION
                                 #########################################################
+                                error_count = 0 
                                 education_text = ""
 
-                                # education text manifested through
-                                if not education_text:
-                                    # Look for the education in infobox under "Alma mater" label
-                                    infobox_alma_mater_label = infobox.find("th", text="Alma\xa0mater")
-                                    if infobox_alma_mater_label:
-                                        education_text = infobox_alma_mater_label.find_next("td").get_text(separator=" ", strip=True)
-                                    else:
-                                        # If "Alma mater" is not found, look for "Institutions" in the infobox
-                                        infobox_institutions_label = infobox.find("th", {"scope": "row", "class": "infobox-label"}, text="Institutions")
-                                        if infobox_institutions_label:
-                                            education_text = infobox_institutions_label.find_next("td").get_text(separator=" ", strip=True)
-                                        else:
-                                            # If neither "Alma mater" nor "Institutions" is found, look for "Education" in the infobox
-                                            infobox_education_label = infobox.find("th", {"scope": "row", "class": "infobox-label"}, text="Education")
-                                            if infobox_education_label:
-                                                    education_text = infobox_education_label.find_next("td").get_text(separator=" ", strip=True)
+                                # Look for the education in infobox under different labels
+                                labels_to_search = ["Alma\xa0mater", "Institutions", "Education"]
 
+                                for label in labels_to_search:
+                                    label_element = infobox.find("th", text=label)
+                                    if label_element:
+                                        education_element = label_element.find_next("td")
+                                        if education_element:
+                                            if education_element.find("ul"):
+                                                # For <ul><li> structure
+                                                education_list = education_element.find_all("li")
+                                                if education_list:
+                                                    for edu_item in education_list:
+                                                        # Check for keywords indicating a bachelor's degree
+                                                        if any(keyword in edu_item.get_text() for keyword in ["B.S.", "BSc", "B.Sc.", "BA"]):
+                                                            education_text = edu_item.get_text(separator=" ", strip=True)
+                                                            break
+                                                    else:
+                                                        # Extract text only from the first link if no bachelor's degree indicator is found
+                                                        education_text = education_list[0].get_text(separator=" ", strip=True)
+                                                    break
+                                            else:
+                                                # For linked institutions within <td>
+                                                education_links = education_element.find_all("a")
+                                                if education_links:
+                                                    for edu_link in education_links:
+                                                        # Check for keywords indicating a bachelor's degree
+                                                        if any(keyword in edu_link.get_text() for keyword in ["B.S.", "BSc", "B.Sc.", "BA", "AB"]):
+                                                            education_text = edu_link.get_text(strip=True)
+                                                            break
+                                                    else:
+                                                        # Extract text from the first link if no bachelor's degree indicator is found
+                                                        education_text = education_links[0].get_text(strip=True)
+                                                    break
                                 # Write the scientist's surname, awards count, and education text to the text file
                                 info_file.write(f"Surname: {surname}\nAwards: {awards_count}\nEducation: {education_text}\n\n")
 
@@ -133,10 +151,13 @@ if response.status_code == 200:
 
                             # sleep interval to avoid overwhelming the server
                             time.sleep(1)
-
+                        
                         except Exception as e:
-                            print(f"An error occurred while processing {scientist_url}: {str(e)}")
+                            error_count += 1
+                            print(f"{error_count}) An error occurred while processing {scientist_url}: {str(e)}")
 
-    print("Information including surnames, awards, and education has been scraped and saved to scientist_info.txt.")
+    print("Information including surnames, awards, and education has been scraped and saved to old_scientist_BA_info.txt.")
 else:
     print("Failed to retrieve the web page. Status code:", response.status_code)
+
+
