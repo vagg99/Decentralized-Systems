@@ -57,7 +57,7 @@ Awards: 2
 Education: University of Mainz 
 Surname: Bayer
 Awards: 1
-Education: University of Illinois at Urbana–Champaign
+Education: University of Illinois at Urbana-Champaign
 Surname: Bell
 Awards: 8
 Education: MIT 
