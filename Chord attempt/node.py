@@ -10,6 +10,8 @@ from copy import deepcopy
 m = 7
 ip = '127.0.0.1'
 port = 80 
+thres = 4
+
 
 # The class DataStore is used to store the key value pairs at each node
 class DataStore:
@@ -87,9 +89,13 @@ class Node:
             # print('searching in my datastore', str(self.nodeinfo))
             data = message.split('|')[1]
             if data in self.data_store.data:
-                return self.data_store.data[data]
+                awards_num = self.data_store.data[data].split(',')[1]
+                if int(awards_num) >= thres:
+                    return self.data_store.data[data]
+                else:
+                    return "No scientists with "+str(thres)+" or more awards in this institution"
             else:
-                return "NOT FOUND"
+                return "Institution not found"
             
         if operation == "send_keys":
             id_of_joining_node = int(args[0])
