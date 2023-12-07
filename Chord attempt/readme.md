@@ -17,7 +17,7 @@
 
 **2.** πρόβλημα με duplicate keys
 
-**4.** node leave
+**3.** node leave
 
 ***Διορθώσεις/ Προαθήκες:*** 
 
