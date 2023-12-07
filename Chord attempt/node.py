@@ -4,6 +4,7 @@ import time
 import hashlib
 import random
 import sys
+import os
 from copy import deepcopy
 
 m = 7
@@ -95,7 +96,7 @@ class Node:
             result = self.send_keys(id_of_joining_node)
 
         if operation == "insert":
-            # print("finding hop to insert the key" , str(self.nodeinfo) )
+            #print("finding hop to insert the key" , str(self.nodeinfo) )
             data = message.split('|')[1].split(":") 
             key = data[0]
             value = data[1]
@@ -152,13 +153,12 @@ class Node:
         takes as arguments the connection and the address of the connected device. 
         '''
         with conn:
-            # print('Connected by', addr)
-            
+            #print('Connected by', addr)
             data = conn.recv(1024)
             
             data = str(data.decode('utf-8'))
             data = data.strip('\n')
-            # print(data)
+            #print(data)
             data = self.process_requests(data)
             # print('Sending', data)
             data = bytes(str(data), 'utf-8')
@@ -507,21 +507,33 @@ class RequestHandler:
 # The ip = "127.0.0.1" signifies that the node is executing on the localhost
 
 ip = "127.0.0.1"
-# This if statement is used to check if the node joining is the first node of the ring or not
 
-if len(sys.argv) == 3:
-    print("JOINING RING")
-    node = Node(ip, int(sys.argv[1]))
 
-    node.join(ip,int(sys.argv[2]))
-    node.start()
+if __name__ == '__main__':
+    try:
+        # This if statement is used to check if the node joining is the first node of the ring or not
+        if len(sys.argv) == 3:
+            print("JOINING RING")
+            node = Node(ip, int(sys.argv[1]))
 
-if len(sys.argv) == 2:
-    print("CREATING RING")
-    node = Node(ip, int(sys.argv[1]))
+            node.join(ip,int(sys.argv[2]))
+            node.start()
 
-    node.predecessor = Node(ip,node.port)
-    node.successor = Node(ip,node.port)
-    node.finger_table.table[0][1] = node
-    node.start()
+        if len(sys.argv) == 2:
+            print("CREATING RING")
+            node = Node(ip, int(sys.argv[1]))
+
+            node.predecessor = Node(ip,node.port)
+            node.successor = Node(ip,node.port)
+            node.finger_table.table[0][1] = node
+            node.start()
+
+    except KeyboardInterrupt:
+        print('Terminated')
+        try:
+            sys.exit(0)
+        except SystemExit:
+            os._exit(0)
+
+
 
