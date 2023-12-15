@@ -1,0 +1,2463 @@
+--------------------------
+> Surnames under letter: A
+--------------------------
+
+Surname: Atta
+Awards: 10
+Education: University of Malaya
+
+Surname: Aalst
+Awards: 0
+Education: RWTH Aachen University
+
+Surname: Aaronson
+Awards: 4
+Education: Cornell University
+
+Surname: Abebe
+Awards: 3
+Education: Cornell University
+
+Surname: Abelson
+Awards: 1
+Education: Princeton University 
+
+Surname: Abiteboul
+Awards: 4
+Education: University of Southern California
+
+Surname: Abramsky
+Awards: 4
+Education: Queen Mary University of London 
+
+Surname: Adleman
+Awards: 2
+Education: University of California, Berkeley
+
+Surname: Agrawal
+Awards: 9
+Education: Indian Institute of Technology Kanpur
+
+Surname: Ahn
+Awards: 3
+Education: Duke University
+
+Surname: Alfred
+Awards: 7
+Education: University of Toronto
+
+Surname: Allen
+Awards: 6
+Education: University at Albany
+
+Surname: Amdahl
+Awards: 4
+Education: South Dakota State University
+
+Surname: Anderson
+Awards: 5
+Education: Wesleyan University
+
+Surname: Andrew
+Awards: 0
+Education: -no data-
+
+Surname: Aragon
+Awards: 4
+Education: California Institute of Technology
+
+Surname: Arden
+Awards: 0
+Education: Purdue University
+
+Surname: Angie
+Awards: 0
+Education: Tennessee State University
+
+Surname: Arora
+Awards: 0
+Education: Massachusetts Institute of Technology
+
+Surname: Asprey
+Awards: 0
+Education: Vassar College
+
+Surname: Atanasoff
+Awards: 17
+Education: University of Florida
+
+Surname: Atre
+Awards: 0
+Education: University of Poona
+
+--------------------------
+> Surnames under letter: B
+--------------------------
+
+Surname: Babbage
+Awards: 8
+Education: Peterhouse, Cambridge
+
+Surname: Bachman
+Awards: 5
+Education: University of Pennsylvania
+
+Surname: Backhouse
+Awards: 0
+Education: Churchill College, Cambridge
+
+Surname: Backus
+Awards: 9
+Education: University of Virginia
+
+Surname: Bacon
+Awards: 3
+Education: U.C. Berkeley
+
+Surname: Bader
+Awards: 1
+Education: Lehigh University
+
+Surname: Bahl
+Awards: 3
+Education: University of Massachusetts, Amherst
+
+Surname: Barr
+Awards: 0
+Education: North Carolina State University
+
+Surname: Bartik
+Awards: 3
+Education: University of Pennsylvania 
+
+Surname: Barto
+Awards: 2
+Education: University of Michigan
+
+Surname: Bauer
+Awards: 2
+Education: Ludwig-Maximilians-Universität
+
+Surname: Bayer
+Awards: 1
+Education: University of Illinois at Urbana–Champaign
+
+Surname: Bell
+Awards: 8
+Education: MIT
+
+Surname: Bellovin
+Awards: 0
+Education: -no data-
+
+Surname: Berdichevsky
+Awards: 0
+Education: -no data-
+
+Surname: Berners-Lee
+Awards: 9
+Education: The Queen's College, Oxford
+
+Surname: Bernstein
+Awards: 0
+Education: University of California, Berkeley
+
+Surname: Bhushan
+Awards: 0
+Education: Indian Institute of Technology Kanpur
+
+Surname: Bjørner
+Awards: 6
+Education: Technical University of Denmark
+
+Surname: Black
+Awards: 5
+Education: London South Bank University
+
+Surname: Blei
+Awards: 4
+Education: Brown University
+
+Surname: Blum
+Awards: 0
+Education: Brooklyn College
+
+Surname: Blum
+Awards: 3
+Education: -no data-
+
+Surname: Blum
+Awards: 5
+Education: Massachusetts Institute of Technology
+
+Surname: Böhm
+Awards: 0
+Education: ETH Zürich
+
+Surname: Booch
+Awards: 2
+Education: U.S. Air Force Academy
+
+Surname: Boole
+Awards: 17
+Education: -no data-
+
+Surname: Booth
+Awards: 0
+Education: Jesus College
+
+Surname: Booth
+Awards: 0
+Education: -no data-
+
+Surname: Borg
+Awards: 3
+Education: New York University
+
+Surname: Bert
+Awards: 0
+Education: -no data-
+
+Surname: Bowen
+Awards: 12
+Education: University College
+
+Surname: Bourne
+Awards: 1
+Education: King's College London
+
+Surname: Bouwman
+Awards: 0
+Education: VU University Amsterdam
+
+Surname: Boyer
+Awards: 0
+Education: Mathematics
+
+Surname: Brandenburg
+Awards: 1
+Education: University of Erlangen-Nuremberg
+
+Surname: Brassard
+Awards: 3
+Education: Université de Montréal
+
+Surname: Breed
+Awards: 2
+Education: B.S, Stanford University, 1961
+
+Surname: Brin
+Awards: 5
+Education: University of Maryland, College Park 
+
+Surname: Brown
+Awards: 0
+Education: -no data-
+
+Surname: Brinch
+Awards: 1
+Education: Technical University of Denmark
+
+Surname: Brooks
+Awards: 5
+Education: Duke University
+
+Surname: Brooks
+Awards: 13
+Education: Stanford University
+
+Surname: Butler
+Awards: 0
+Education: Trinity College, Dublin
+
+--------------------------
+> Surnames under letter: C
+--------------------------
+
+Surname: Caballero
+Awards: 3
+Education: University of La Laguna
+
+Surname: Camp
+Awards: 2
+Education: The College of William and Mary
+
+Surname: Campbell-Kelly
+Awards: 0
+Education: Sunderland Polytechnic
+
+Surname: Candlin
+Awards: 0
+Education: University of Cambridge
+
+Surname: Canion
+Awards: 0
+Education: -no data-
+
+Surname: Cantrill
+Awards: 0
+Education: -no data-
+
+Surname: Cardelli
+Awards: 3
+Education: University of Pisa
+
+Surname: Carmack
+Awards: 0
+Education: -no data-
+
+Surname: Caspersen
+Awards: 8
+Education: -no data-
+
+Surname: Catmull
+Awards: 4
+Education: University of Utah
+
+Surname: Cerf
+Awards: 12
+Education: Stanford University
+
+Surname: Chaitin
+Awards: 0
+Education: Mohammed VI Polytechnic University
+
+Surname: Cailliau
+Awards: 13
+Education: Ghent University
+
+Surname: Chaochen
+Awards: 1
+Education: -no data-
+
+Surname: Chen
+Awards: 15
+Education: National Taiwan University
+
+Surname: Chou
+Awards: 0
+Education: -no data-
+
+Surname: Church
+Awards: 0
+Education: Princeton University
+
+Surname: Clarke
+Awards: 4
+Education: Cornell University
+
+Surname: Cocke
+Awards: 4
+Education: Duke University
+
+Surname: Codd
+Awards: 5
+Education: Exeter College, Oxford
+
+Surname: Coldwater
+Awards: 0
+Education: -no data-
+
+Surname: Colton
+Awards: 0
+Education: Durham University
+
+Surname: Colmerauer
+Awards: 0
+Education: -no data-
+
+Surname: Compton
+Awards: 0
+Education: -no data-
+
+Surname: Conway
+Awards: 2
+Education: Cornell
+
+Surname: Cook
+Awards: 8
+Education: Harvard University
+
+Surname: Cooper
+Awards: 0
+Education: University of California, Los Angeles
+
+Surname: Corbató
+Awards: 8
+Education: California Institute of Technology
+
+Surname: Cousot
+Awards: 2
+Education: École Nationale Supérieure des Mines de Nancy
+
+Surname: Cox
+Awards: 4
+Education: University College London
+
+Surname: Cray
+Awards: 0
+Education: University of Minnesota
+
+Surname: Cristianini
+Awards: 4
+Education: University of Trieste
+
+Surname: Crowcroft
+Awards: 3
+Education: University of Cambridge
+
+Surname: Culler
+Awards: 2
+Education: University of California, Berkeley
+
+Surname: Curry
+Awards: 0
+Education: Harvard University
+
+--------------------------
+> Surnames under letter: D
+--------------------------
+
+Surname: Dadda
+Awards: 0
+Education: Politecnico di Milano
+
+Surname: Dahl
+Awards: 12
+Education: University of Oslo
+
+Surname: Dahl
+Awards: 0
+Education: UC San Diego
+
+Surname: Dam
+Awards: 0
+Education: -no data-
+
+Surname: Das
+Awards: 0
+Education: Georgia Tech
+
+Surname: Daswani
+Awards: 0
+Education: Stanford University
+
+Surname: Date
+Awards: 0
+Education: University of Cambridge
+
+Surname: Davis
+Awards: 0
+Education: Bachelor's degree
+
+Surname: Dean
+Awards: 6
+Education: University of Minnesota
+
+Surname: Demaine
+Awards: 2
+Education: Dalhousie University
+
+Surname: DeMarco
+Awards: 11
+Education: Cornell University
+
+Surname: DeMillo
+Awards: 0
+Education: University of St. Thomas
+
+Surname: Dorothy
+Awards: 4
+Education: Purdue University 
+
+Surname: Denning
+Awards: 6
+Education: MIT
+
+Surname: Dertouzos
+Awards: 0
+Education: -no data-
+
+Surname: Dewar
+Awards: 0
+Education: University of Chicago
+
+Surname: Dham
+Awards: 0
+Education: Delhi College of Engineering
+
+Surname: Diffie
+Awards: 6
+Education: Massachusetts Institute of Technology
+
+Surname: Dijkstra
+Awards: 5
+Education: Leiden University
+
+Surname: Dillon
+Awards: 0
+Education: University of California, Berkeley
+
+Surname: Dix
+Awards: 0
+Education: -no data-
+
+Surname: Dongarra
+Awards: 15
+Education: Chicago State University 
+
+Surname: Dourish
+Awards: 7
+Education: Computer Science
+
+Surname: Draper
+Awards: 5
+Education: Massachusetts Institute of Technology
+
+Surname: Dumais
+Awards: 1
+Education: Indiana University
+
+Surname: Dunkels
+Awards: 0
+Education: Swedish Institute of Computer Science
+
+Surname: Dunn
+Awards: 2
+Education: Oberlin College
+
+--------------------------
+> Surnames under letter: E
+--------------------------
+
+Surname: Easley
+Awards: 0
+Education: Cleveland State University
+
+Surname: Eckert
+Awards: 1
+Education: University of Pennsylvania
+
+Surname: Edelman
+Awards: 7
+Education: MIT
+
+Surname: Eich
+Awards: 0
+Education: University of Illinois Urbana-Champaign
+
+Surname: Emeagwali
+Awards: 0
+Education: George Washington University School of Engineering and Applied Science
+
+Surname: E.
+Awards: 2
+Education: Harvard 
+
+Surname: Engelbart
+Awards: 7
+Education: Oregon State University 
+
+Surname: Engelhardt
+Awards: 6
+Education: Stanford University
+
+Surname: Eppstein
+Awards: 0
+Education: Stanford University
+
+Surname: Yershov
+Awards: 0
+Education: Moscow State University
+
+Surname: Estridge
+Awards: 0
+Education: University of Florida
+
+Surname: Etzioni
+Awards: 6
+Education: Harvard University
+
+Surname: Evans
+Awards: 0
+Education: University College London
+
+Surname: Evans
+Awards: 1
+Education: -no data-
+
+Surname: Even
+Awards: 0
+Education: Harvard University
+
+--------------------------
+> Surnames under letter: F
+--------------------------
+
+Surname: Fahlman
+Awards: 1
+Education: Massachusetts Institute of Technology
+
+Surname: Feigenbaum
+Awards: 3
+Education: Carnegie Mellon University
+
+Surname: Felten
+Awards: 2
+Education: California Institute of Technology
+
+Surname: Finin
+Awards: 3
+Education: MIT
+
+Surname: Firesmith
+Awards: 0
+Education: Arizona State University
+
+Surname: Flowers
+Awards: 0
+Education: University of London
+
+Surname: Floyd
+Awards: 5
+Education: University of Chicago
+
+Surname: Floyd
+Awards: 2
+Education: University of California, Berkeley
+
+Surname: Fogel
+Awards: 0
+Education: New York University
+
+Surname: Foley
+Awards: 6
+Education: University of Michigan
+
+Surname: Forbus
+Awards: 0
+Education: Massachusetts Institute of Technology
+
+Surname: Ford
+Awards: 0
+Education: -no data-
+
+Surname: Fortnow
+Awards: 4
+Education: Cornell University
+
+Surname: Fayed
+Awards: 0
+Education: Menoufia University
+
+Surname: Fowler
+Awards: 0
+Education: -no data-
+
+Surname: France
+Awards: 5
+Education: University of the West Indies
+
+Surname: Fredkin
+Awards: 4
+Education: California Institute of Technology
+
+Surname: Freund
+Awards: 1
+Education: The Hebrew University of Jerusalem
+
+Surname: Friedman
+Awards: 0
+Education: -no data-
+
+Surname: Froese
+Awards: 4
+Education: University of British Columbia
+
+Surname: Fu
+Awards: 1
+Education: University of California, San Diego
+
+Surname: Fukushima
+Awards: 1
+Education: Kyoto University
+
+Surname: Fulkerson
+Awards: 2
+Education: Southern Illinois University
+
+--------------------------
+> Surnames under letter: G
+--------------------------
+
+Surname: Gabriel
+Awards: 2
+Education: B.A., Northeastern University , 1972
+
+Surname: Galil
+Awards: 3
+Education: Cornell University 
+
+Surname: Galler
+Awards: 0
+Education: University of Chicago
+
+Surname: García-Molina
+Awards: 1
+Education: Monterrey Institute of Technology and Higher Education
+
+Surname: Garey
+Awards: 0
+Education: University of Wisconsin–Madison
+
+Surname: Garis
+Awards: 0
+Education: -no data-
+
+Surname: Gates
+Awards: 4
+Education: Harvard University
+
+Surname: Gelernter
+Awards: 13
+Education: Yale University
+
+Surname: Gelobter
+Awards: 4
+Education: Brown University
+
+Surname: Geschke
+Awards: 12
+Education: Xavier University
+
+Surname: Ghahramani
+Awards: 2
+Education: University of Pennsylvania
+
+Surname: Ghemawat
+Awards: 1
+Education: MIT 
+
+Surname: Gibbons
+Awards: 0
+Education: University of Edinburgh
+
+Surname: Gilbert
+Awards: 19
+Education: Miami University
+
+Surname: Giles
+Awards: 7
+Education: Rhodes College
+
+Surname: Ginsburg
+Awards: 0
+Education: City College of New York
+
+Surname: Gödel
+Awards: 3
+Education: University of Vienna
+
+Surname: Goel
+Awards: 1
+Education: Ohio State University
+
+Surname: Goguen
+Awards: 0
+Education: Harvard University
+
+Surname: Goldberg
+Awards: 0
+Education: University of Michigan
+
+Surname: Goldberg
+Awards: 2
+Education: Massachusetts Institute of Technology
+
+Surname: Goldberg
+Awards: 0
+Education: University of Waterloo 
+
+Surname: Goldreich
+Awards: 1
+Education: Technion
+
+Surname: Goldwasser
+Awards: 11
+Education: Carnegie Mellon University
+
+Surname: Gene
+Awards: 0
+Education: University of Illinois at Urbana-Champaign
+
+Surname: Gaston
+Awards: 1
+Education: University of Waterloo
+
+Surname: Goodfellow
+Awards: 0
+Education: Stanford University
+
+Surname: Gosling
+Awards: 5
+Education: University of Calgary 
+
+Surname: Graham
+Awards: 0
+Education: Cornell University
+
+Surname: Graham
+Awards: 5
+Education: Harvard
+
+Surname: Gray
+Awards: 5
+Education: University of California, Berkeley
+
+Surname: Greibach
+Awards: 0
+Education: Radcliffe College
+
+Surname: Gries
+Awards: 4
+Education: Queens College
+
+Surname: Gropp
+Awards: 1
+Education: Stanford University
+
+Surname: Guberman
+Awards: 0
+Education: -no data-
+
+Surname: Guha
+Awards: 2
+Education: Indian Institute of Technology Madras
+
+Surname: Gunther
+Awards: 9
+Education: La Trobe University
+
+Surname: Gutknecht
+Awards: 0
+Education: ETH Zurich
+
+Surname: Guy
+Awards: 0
+Education: University of Cambridge
+
+Surname: Griesemer
+Awards: 0
+Education: -no data-
+
+--------------------------
+> Surnames under letter: H
+--------------------------
+
+Surname: Habermann
+Awards: 0
+Education: Free University of Amsterdam
+
+Surname: Hall
+Awards: 1
+Education: University of Washington
+
+Surname: Hall
+Awards: 6
+Education: Ealing Grammar School for Girls
+
+Surname: Halpern
+Awards: 2
+Education: Cornell University
+
+Surname: Hamilton
+Awards: 11
+Education: University of Michigan
+
+Surname: Hamming
+Awards: 4
+Education: University of Chicago
+
+Surname: Han
+Awards: 0
+Education: University of Wisconsin - Madison
+
+Surname: Harary
+Awards: 0
+Education: Brooklyn College
+
+Surname: Harris
+Awards: 0
+Education: School of Oriental and African Studies
+
+Surname: Hartmanis
+Awards: 3
+Education: University of Marburg
+
+Surname: Håstad
+Awards: 4
+Education: Massachusetts Institute of Technology
+
+Surname: Hatton
+Awards: 3
+Education: King's College, Cambridge
+
+Surname: He
+Awards: 0
+Education: Fudan University
+
+Surname: Hehner
+Awards: 0
+Education: Carleton University
+
+Surname: Hellman
+Awards: 5
+Education: New York University
+
+Surname: Heiser
+Awards: 14
+Education: University of Freiburg
+
+Surname: Hendler
+Awards: 0
+Education: Yale University
+
+Surname: Hewitt
+Awards: 0
+Education: MIT
+
+Surname: Hightower
+Awards: 0
+Education: -no data-
+
+Surname: Hillis
+Awards: 3
+Education: Massachusetts Institute of Technology
+
+Surname: Hinton
+Awards: 9
+Education: University of Edinburgh 
+
+Surname: Hirschberg
+Awards: 2
+Education: University of Pennsylvania
+
+Surname: Hoare
+Awards: 5
+Education: Moscow State University
+
+Surname: Hodes
+Awards: 0
+Education: Polytechnic Institute of Brooklyn
+
+Surname: Holberton
+Awards: 4
+Education: University of Pennsylvania
+
+Surname: Henry
+Awards: 5
+Education: University of Michigan
+
+Surname: Herman
+Awards: 3
+Education: City College of New York
+
+Surname: Holzmann
+Awards: 4
+Education: Delft University of Technology
+
+Surname: Hopcroft
+Awards: 7
+Education: Seattle University
+
+Surname: Hopper
+Awards: 9
+Education: Vassar College
+
+Surname: Horvitz
+Awards: 0
+Education: -no data-
+
+Surname: Householder
+Awards: 0
+Education: University of Chicago
+
+Surname: Hudak
+Awards: 6
+Education: Massachusetts Institute of Technology 
+
+Surname: Huffman
+Awards: 5
+Education: Ohio State University
+
+Surname: Hughes
+Awards: 2
+Education: University of Oxford
+
+Surname: Hui
+Awards: 2
+Education: University of Alberta
+
+Surname: Humphrey
+Awards: 3
+Education: IBM
+
+Surname: Hoberman
+Awards: 0
+Education: -no data-
+
+--------------------------
+> Surnames under letter: I
+--------------------------
+
+Surname: Ichbiah
+Awards: 1
+Education: -no data-
+
+Surname: Ierusalimschy
+Awards: 0
+Education: Pontifical Catholic University of Rio de Janeiro
+
+Surname: Ingalls
+Awards: 12
+Education: Harvard University
+
+Surname: Irwin
+Awards: 14
+Education: University of Illinois at Urbana-Champaign
+
+Surname: Iverson
+Awards: 4
+Education: Queen's University
+
+--------------------------
+> Surnames under letter: J
+--------------------------
+
+Surname: Jacobson
+Awards: 0
+Education: Chalmers Institute of Technology
+
+Surname: Jain
+Awards: 10
+Education: Michigan State University
+
+Surname: Jain
+Awards: 0
+Education: Indian Institute of Technology, Kharagpur
+
+Surname: Jonathan
+Awards: 0
+Education: -no data-
+
+Surname: Johnson
+Awards: 2
+Education: Amherst College
+
+Surname: Johnson
+Awards: 0
+Education: Columbia University
+
+Surname: Jones
+Awards: 0
+Education: University of Oxford
+
+Surname: Jordan
+Awards: 5
+Education: University of California, San Diego
+
+Surname: Joseph
+Awards: 5
+Education: Wilson College, Mumbai
+
+Surname: Joshi
+Awards: 12
+Education: College of Engineering, Pune
+
+Surname: Joy
+Awards: 4
+Education: University of Michigan
+
+Surname: Jurafsky
+Awards: 3
+Education: Stanford University
+
+--------------------------
+> Surnames under letter: K
+--------------------------
+
+Surname: Kahan
+Awards: 1
+Education: University of Toronto
+
+Surname: Kahn
+Awards: 12
+Education: City College of New York
+
+Surname: Kak
+Awards: 0
+Education: University of Madras
+
+Surname: Kamp
+Awards: 0
+Education: -no data-
+
+Surname: Karger
+Awards: 3
+Education: Harvard University
+
+Surname: Karp
+Awards: 16
+Education: Harvard University
+
+Surname: Karmarkar
+Awards: 11
+Education: IIT Bombay
+
+Surname: Kaehler
+Awards: 0
+Education: Stanford University
+
+Surname: Kay
+Awards: 6
+Education: University of Colorado at Boulder
+
+Surname: Kayal
+Awards: 2
+Education: IIT Kanpur
+
+Surname: Kellis
+Awards: 3
+Education: Massachusetts Institute of Technology
+
+Surname: Ken
+Awards: 0
+Education: Rice University
+
+Surname: Kernighan
+Awards: 0
+Education: University of Toronto
+
+Surname: Kiczales
+Awards: 0
+Education: Massachusetts Institute of Technology
+
+Surname: Kirstein
+Awards: 3
+Education: University of Cambridge
+
+Surname: Kleene
+Awards: 8
+Education: Amherst College
+
+Surname: Klein
+Awards: 1
+Education: Cornell University
+
+Surname: Kleinrock
+Awards: 5
+Education: City College of New York
+
+Surname: Knuth
+Awards: 14
+Education: Case Institute of Technology 
+
+Surname: Koenig
+Awards: 0
+Education: Columbia University
+
+Surname: Koller
+Awards: 5
+Education: Hebrew University of Jerusalem
+
+Surname: Kölling
+Awards: 8
+Education: University of Bremen
+
+Surname: Kolmogorov
+Awards: 7
+Education: Moscow State University
+
+Surname: Kolodner
+Awards: 8
+Education: Brandeis University
+
+Surname: Korn
+Awards: 0
+Education: -no data-
+
+Surname: Koster
+Awards: 0
+Education: University of Amsterdam
+
+Surname: Kowalski
+Awards: 2
+Education: University of Chicago
+
+Surname: Kruskal
+Awards: 0
+Education: University of Chicago
+
+Surname: Kruusmaa
+Awards: 4
+Education: Tallinn University of Technology
+
+Surname: Kurtz
+Awards: 1
+Education: Princeton University
+
+--------------------------
+> Surnames under letter: L
+--------------------------
+
+Surname: Ladner
+Awards: 4
+Education: St. Mary's College of California
+
+Surname: Lam
+Awards: 9
+Education: University of British Columbia
+
+Surname: Leslie
+Awards: 6
+Education: Massachusetts Institute of Technology 
+
+Surname: Lampson
+Awards: 6
+Education: Harvard University
+
+Surname: Landin
+Awards: 0
+Education: Clare College
+
+Surname: Lane
+Awards: 0
+Education: Carnegie Mellon University
+
+Surname: Lattner
+Awards: 2
+Education: University of Portland 
+
+Surname: Lazowska
+Awards: 0
+Education: Brown University
+
+Surname: Lehman
+Awards: 3
+Education: Imperial College London
+
+Surname: Leiserson
+Awards: 0
+Education: Carnegie Mellon University
+
+Surname: Lenat
+Awards: 6
+Education: University of Pennsylvania
+
+Surname: LeCun
+Awards: 3
+Education: ESIEE Paris 
+
+Surname: Lerdorf
+Awards: 0
+Education: University of Waterloo
+
+Surname: Levchin
+Awards: 0
+Education: University of Illinois at Urbana-Champaign
+
+Surname: Leonid
+Awards: 1
+Education: Moscow University
+
+Surname: Leyton-Brown
+Awards: 2
+Education: McMaster University
+
+Surname: Licklider
+Awards: 0
+Education: Washington University in St. Louis
+
+Surname: Liedtke
+Awards: 0
+Education: Bielefeld University
+
+Surname: Lions
+Awards: 0
+Education: Dalhousie University
+
+Surname: Lindsey
+Awards: 0
+Education: -no data-
+
+Surname: Lipton
+Awards: 3
+Education: Carnegie Mellon
+
+Surname: Liskov
+Awards: 3
+Education: Stanford University 
+
+Surname: Liu
+Awards: 0
+Education: Cornell University
+
+Surname: Long
+Awards: 5
+Education: San Diego State University
+
+Surname: Lopez
+Awards: 7
+Education: New Mexico State University
+
+Surname: Lovegrove
+Awards: 0
+Education: Newnham College, Cambridge
+
+Surname: Lovelace
+Awards: 0
+Education: -no data-
+
+Surname: Luckham
+Awards: 0
+Education: MIT
+
+Surname: Lynch
+Awards: 9
+Education: Brooklyn College
+
+--------------------------
+> Surnames under letter: M
+--------------------------
+
+Surname: Magnenat
+Awards: 2
+Education: University of Geneva
+
+Surname: Maibaum
+Awards: 6
+Education: University of Toronto
+
+Surname: Marlow
+Awards: 3
+Education: University of Glasgow
+
+Surname: Manna
+Awards: 3
+Education: Technion – Israel Institute of Technology
+
+Surname: Martin
+Awards: 29
+Education: University of Oxford
+
+Surname: Martin
+Awards: 0
+Education: -no data-
+
+Surname: Matiyasevich
+Awards: 7
+Education: Leningrad State University
+
+Surname: Matsumoto
+Awards: 0
+Education: University of Tsukuba
+
+Surname: Mauchly
+Awards: 2
+Education: Johns Hopkins University
+
+Surname: Maulik
+Awards: 11
+Education: Calcutta University
+
+Surname: McAuley
+Awards: 1
+Education: University of Cambridge
+
+Surname: McCarthy
+Awards: 7
+Education: Princeton University
+
+Surname: McCallum
+Awards: 2
+Education: University of Massachusetts Amherst
+
+Surname: McIlroy
+Awards: 3
+Education: Cornell University
+
+Surname: McKinstry
+Awards: 0
+Education: -no data-
+
+Surname: Marshall
+Awards: 0
+Education: University of California, Berkeley
+
+Surname: Meertens
+Awards: 2
+Education: Centrum Wiskunde & Informatica
+
+Surname: Mehlhorn
+Awards: 4
+Education: Universität des Saarlandes
+
+Surname: Metcalf
+Awards: 0
+Education: -no data-
+
+Surname: Meyer
+Awards: 3
+Education: Université de Nancy
+
+Surname: Micali
+Awards: 3
+Education: La Sapienza University of Rome
+
+Surname: Milner
+Awards: 5
+Education: Ferranti
+
+Surname: Minker
+Awards: 1
+Education: Brooklyn College
+
+Surname: Marvin
+Awards: 6
+Education: Harvard University
+
+Surname: Mitchell
+Awards: 9
+Education: University of Waterloo
+
+Surname: M.
+Awards: 4
+Education: Stanford University
+
+Surname: scientist)
+Awards: 3
+Education: IIT Kanpur
+
+Surname: Mockapetris
+Awards: 4
+Education: Massachusetts Institute of Technology
+
+Surname: Moler
+Awards: 2
+Education: California Institute of Technology
+
+Surname: Moller
+Awards: 0
+Education: University of Waterloo 
+
+Surname: Moon
+Awards: 0
+Education: -no data-
+
+Surname: Moore
+Awards: 0
+Education: -no data-
+
+Surname: Moore
+Awards: 0
+Education: -no data-
+
+Surname: Moore
+Awards: 9
+Education: University of California, Berkeley 
+
+Surname: Moore
+Awards: 4
+Education: Stanford University
+
+Surname: Moravec
+Awards: 0
+Education: -no data-
+
+Surname: Morgan
+Awards: 0
+Education: University of Sydney
+
+Surname: Morris
+Awards: 0
+Education: Harvard University
+
+Surname: Moses
+Awards: 0
+Education: MA
+
+Surname: Motwani
+Awards: 5
+Education: IIT Kanpur
+
+Surname: Mukhanov
+Awards: 0
+Education: -no data-
+
+Surname: Muggleton
+Awards: 4
+Education: University of Edinburgh
+
+Surname: Müller
+Awards: 1
+Education: University of Karlsruhe 
+
+Surname: Mycroft
+Awards: 0
+Education: University of Edinburgh 
+
+Surname: Myers
+Awards: 4
+Education: University of Toronto
+
+--------------------------
+> Surnames under letter: N
+--------------------------
+
+Surname: Nagao
+Awards: 10
+Education: Kyoto University
+
+Surname: Nake
+Awards: 9
+Education: -no data-
+
+Surname: Nardi
+Awards: 0
+Education: -no data-
+
+Surname: Naur
+Awards: 15
+Education: Regnecentralen
+
+Surname: Needham
+Awards: 4
+Education: University of Cambridge
+
+Surname: Nelson
+Awards: 2
+Education: Harvard University
+
+Surname: Neumann
+Awards: 0
+Education: Princeton University
+
+Surname: Newell
+Awards: 20
+Education: Stanford University
+
+Surname: Newman
+Awards: 5
+Education: St John's College, Cambridge
+
+Surname: Ng
+Awards: 9
+Education: University of California, Berkeley
+
+Surname: Nils
+Awards: 6
+Education: Stanford University
+
+Surname: Nipkow
+Awards: 0
+Education: MIT
+
+Surname: Nivat
+Awards: 7
+Education: Joseph Fourier University
+
+Surname: Nkambule
+Awards: 3
+Education: University of Pretoria
+
+Surname: Noe
+Awards: 0
+Education: UC Berkeley
+
+Surname: Nordin
+Awards: 0
+Education: University of Dortmund
+
+Surname: Norman
+Awards: 4
+Education: MIT
+
+Surname: Norvig
+Awards: 2
+Education: Brown University
+
+Surname: Novacky
+Awards: 0
+Education: University of Pittsburgh
+
+Surname: Nygaard
+Awards: 1
+Education: M.Sc.
+
+--------------------------
+> Surnames under letter: O
+--------------------------
+
+Surname: Odersky
+Awards: 0
+Education: Ludwig Maximilian University of Munich
+
+Surname: O'Hearn
+Awards: 9
+Education: Dalhousie University
+
+Surname: Omohundro
+Awards: 0
+Education: Stanford University
+
+Surname: O'Sullivan
+Awards: 4
+Education: -no data-
+
+Surname: Ousterhout
+Awards: 2
+Education: Bachelor's degree
+
+Surname: Overmars
+Awards: 0
+Education: Utrecht University
+
+Surname: Owicki
+Awards: 0
+Education: Cornell University
+
+--------------------------
+> Surnames under letter: P
+--------------------------
+
+Surname: Page
+Awards: 9
+Education: University of Michigan 
+
+Surname: Pal
+Awards: 5
+Education: Rajabazar Science College
+
+Surname: Paritosh
+Awards: 6
+Education: Oxford University Computing Laboratory
+
+Surname: Papadimitriou
+Awards: 5
+Education: Athens Polytechnic 
+
+Surname: Park
+Awards: 0
+Education: University of Oxford
+
+Surname: Parnas
+Awards: 0
+Education: -no data-
+
+Surname: Patterson
+Awards: 6
+Education: University of California, Los Angeles
+
+Surname: Paterson
+Awards: 10
+Education: University of Cambridge
+
+Surname: Pătrașcu
+Awards: 0
+Education: Massachusetts Institute of Technology
+
+Surname: Paulson
+Awards: 1
+Education: Stanford University 
+
+Surname: Pausch
+Awards: 1
+Education: Brown University
+
+Surname: Pavón
+Awards: 0
+Education: Technical University of Madrid
+
+Surname: Pearl
+Awards: 4
+Education: Technion – Israel Institute of Technology
+
+Surname: Perlis
+Awards: 2
+Education: M.S., mathematics, MIT 1949
+
+Surname: Perlman
+Awards: 11
+Education: MIT
+
+Surname: Péter
+Awards: 0
+Education: -no data-
+
+Surname: Peyton
+Awards: 2
+Education: University of Cambridge
+
+Surname: Pham
+Awards: 0
+Education: Georgia Institute of Technology , Supélec
+
+Surname: Pieraccini
+Awards: 2
+Education: -no data-
+
+Surname: Pingali
+Awards: 3
+Education: IIT Kanpur
+
+Surname: Plotkin
+Awards: 3
+Education: University of Glasgow
+
+Surname: Pnueli
+Awards: 6
+Education: Tel Aviv University
+
+Surname: Poel
+Awards: 3
+Education: Delft University of Technology
+
+Surname: Popplewell
+Awards: 0
+Education: University of Cambridge
+
+Surname: Post
+Awards: 0
+Education: Princeton University
+
+Surname: Postel
+Awards: 3
+Education: University of California, Los Angeles
+
+Surname: P.
+Awards: 1
+Education: University of Rome
+
+Surname: Press
+Awards: 0
+Education: Harvard University
+
+--------------------------
+> Surnames under letter: R
+--------------------------
+
+Surname: Rozenberg
+Awards: 1
+Education: Polish Academy of Sciences
+
+Surname: Rabin
+Awards: 10
+Education: Hebrew University of Jerusalem
+
+Surname: Raman
+Awards: 13
+Education: -no data-
+
+Surname: Randell
+Awards: 0
+Education: Imperial College London
+
+Surname: Ravn
+Awards: 4
+Education: University of Copenhagen
+
+Surname: Raj
+Awards: 6
+Education: University of Madras
+
+Surname: Reed
+Awards: 0
+Education: MIT
+
+Surname: Reenskaug
+Awards: 0
+Education: Xerox PARC
+
+Surname: Reynolds
+Awards: 2
+Education: Purdue University
+
+Surname: Reynolds
+Awards: 0
+Education: University of Southern California
+
+Surname: Reinder
+Awards: 0
+Education: University of Amsterdam
+
+Surname: Richards
+Awards: 2
+Education: University of Cambridge
+
+Surname: Ries
+Awards: 0
+Education: -no data-
+
+Surname: Rijsbergen
+Awards: 1
+Education: University of Western Australia
+
+Surname: Ritchie
+Awards: 2
+Education: Harvard University
+
+Surname: Ron
+Awards: 5
+Education: Stanford University
+
+Surname: Robinson
+Awards: 4
+Education: University of Sydney
+
+Surname: Rolland
+Awards: 0
+Education: -no data-
+
+Surname: Romero
+Awards: 0
+Education: -no data-
+
+Surname: Rosenfeld
+Awards: 5
+Education: University of Maryland, College Park
+
+Surname: Ross
+Awards: 1
+Education: Oberlin College
+
+Surname: Rossum
+Awards: 4
+Education: University of Amsterdam
+
+Surname: Rudy
+Awards: 0
+Education: St. Xavier High School
+
+Surname: Rudich
+Awards: 4
+Education: Carnegie Mellon
+
+Surname: Rulifson
+Awards: 3
+Education: University of Washington
+
+Surname: Ružička
+Awards: 4
+Education: Comenius University
+
+--------------------------
+> Surnames under letter: S
+--------------------------
+
+Surname: Sadowsky
+Awards: 0
+Education: Harvard University
+
+Surname: Sadrzadeh
+Awards: 0
+Education: Université du Québec à Montréal
+
+Surname: Salton
+Awards: 6
+Education: Brooklyn College
+
+Surname: Sammet
+Awards: 3
+Education: Mount Holyoke College
+
+Surname: Sammut
+Awards: 0
+Education: -no data-
+
+Surname: Sassenrath
+Awards: 0
+Education: University of California, Davis
+
+Surname: Satyanarayanan
+Awards: 5
+Education: IIT Madras 
+
+Surname: Savitch
+Awards: 0
+Education: University of California, Berkeley
+
+Surname: Schaeffer
+Awards: 2
+Education: University of Waterloo
+
+Surname: Schmidhuber
+Awards: 0
+Education: Technical University of Munich
+
+Surname: Steve
+Awards: 0
+Education: University of Oxford
+
+Surname: Schneier
+Awards: 0
+Education: American University
+
+Surname: Schneider
+Awards: 14
+Education: Stony Brook University
+
+Surname: Sarita
+Awards: 6
+Education: Georgia Institute of Technology
+
+Surname: Schölkopf
+Awards: 1
+Education: University of London 
+
+Surname: Scott
+Awards: 6
+Education: UC Berkeley
+
+Surname: Sedgewick
+Awards: 3
+Education: Brown University
+
+Surname: Sethi
+Awards: 0
+Education: Indian Institute of Technology, Kanpur
+
+Surname: Shadbolt
+Awards: 5
+Education: University of Edinburgh 
+
+Surname: Shamir
+Awards: 6
+Education: Tel Aviv University
+
+Surname: Shannon
+Awards: 10
+Education: University of Michigan
+
+Surname: Shaw
+Awards: 0
+Education: University of California, San Diego
+
+Surname: Scott
+Awards: 3
+Education: Brown University
+
+Surname: Shneiderman
+Awards: 15
+Education: City College of New York
+
+Surname: Shortliffe
+Awards: 0
+Education: Harvard University
+
+Surname: Siewiorek
+Awards: 2
+Education: University of Michigan
+
+Surname: Sifakis
+Awards: 10
+Education: National Technical University of Athens
+
+Surname: Simon
+Awards: 10
+Education: University of Chicago
+
+Surname: Singh
+Awards: 2
+Education: University of Texas at Austin
+
+Surname: Sitaraman
+Awards: 0
+Education: University of Massachusetts, Amherst
+
+Surname: Sleator
+Awards: 4
+Education: University of Illinois at Urbana–Champaign
+
+Surname: Sloman
+Awards: 0
+Education: University of Sussex
+
+Surname: Smith
+Awards: 0
+Education: MIT
+
+Surname: Smith
+Awards: 1
+Education: Oberlin College
+
+Surname: Spradling
+Awards: 0
+Education: University of Nebraska - Lincoln
+
+Surname: Srihari
+Awards: 0
+Education: University of Waterloo
+
+Surname: Sargur
+Awards: 4
+Education: Bangalore University
+
+Surname: Stachowiak
+Awards: 0
+Education: Course 6 - Electrical Engineering and Computer Science
+
+Surname: Stallman
+Awards: 5
+Education: Harvard University 
+
+Surname: Starner
+Awards: 0
+Education: -no data-
+
+Surname: Stearns
+Awards: 4
+Education: Carleton College
+
+Surname: Steele
+Awards: 2
+Education: MS , PhD , MIT , 1977, 1980
+
+Surname: Sterling
+Awards: 3
+Education: Old Dominion University
+
+Surname: Stevens
+Awards: 0
+Education: University of Michigan
+
+Surname: Stockmeyer
+Awards: 0
+Education: -no data-
+
+Surname: Stonebraker
+Awards: 9
+Education: Princeton University
+
+Surname: Storaasli
+Awards: 0
+Education: -no data-
+
+Surname: Strachey
+Awards: 0
+Education: University of Cambridge
+
+Surname: Strassen
+Awards: 3
+Education: University of Göttingen
+
+Surname: Stroustrup
+Awards: 11
+Education: Aarhus University 
+
+Surname: Sudan
+Awards: 3
+Education: IIT Delhi
+
+Surname: Sussman
+Awards: 6
+Education: PhD
+
+Surname: Sutherland
+Awards: 4
+Education: RPI
+
+Surname: Sutherland
+Awards: 11
+Education: MIT
+
+Surname: Sweeney
+Awards: 0
+Education: Harvard University
+
+Surname: Szegedy
+Awards: 1
+Education: University of Chicago
+
+--------------------------
+> Surnames under letter: T
+--------------------------
+
+Surname: Tabriz
+Awards: 0
+Education: -no data-
+
+Surname: Tanenbaum
+Awards: 22
+Education: Massachusetts Institute of Technology
+
+Surname: Tate
+Awards: 6
+Education: Lancaster University
+
+Surname: Thalheim
+Awards: 3
+Education: Dresden University of Technology
+
+Surname: Tardos
+Awards: 1
+Education: Eötvös Loránd University
+
+Surname: Tardos
+Awards: 4
+Education: Eötvös Loránd University
+
+Surname: Tarjan
+Awards: 5
+Education: California Institute of Technology
+
+Surname: Taylor
+Awards: 7
+Education: Purdue University
+
+Surname: Teevan
+Awards: 1
+Education: Yale University
+
+Surname: Teng
+Awards: 3
+Education: Shanghai Jiao Tong University
+
+Surname: Tesler
+Awards: 0
+Education: Stanford University
+
+Surname: Tevanian
+Awards: 0
+Education: -no data-
+
+Surname: Thacker
+Awards: 1
+Education: University of California, Berkeley
+
+Surname: Thalmann
+Awards: 3
+Education: University of Geneva
+
+Surname: Thompson
+Awards: 9
+Education: University of California, Berkeley
+
+Surname: Thrun
+Awards: 1
+Education: University of Bonn
+
+Surname: Tichy
+Awards: 0
+Education: Technische Universität München
+
+Surname: Toh
+Awards: 3
+Education: University of Cambridge
+
+Surname: Torvalds
+Awards: 3
+Education: -no data-
+
+Surname: Torres
+Awards: 1
+Education: Official School of the Road Engineers' Corps of Madrid
+
+Surname: Townsend
+Awards: 3
+Education: Indiana University
+
+Surname: Traub
+Awards: 0
+Education: -no data-
+
+Surname: Tukey
+Awards: 7
+Education: Princeton University 
+
+Surname: Turing
+Awards: 5
+Education: Princeton University 
+
+Surname: Turner
+Awards: 0
+Education: D.Phil.
+
+Surname: Turoff
+Awards: 5
+Education: University of California - Berkeley
+
+--------------------------
+> Surnames under letter: U
+--------------------------
+
+Surname: Ullman
+Awards: 12
+Education: Columbia University
+
+--------------------------
+> Surnames under letter: V
+--------------------------
+
+Surname: Valiant
+Awards: 6
+Education: Imperial College London 
+
+Surname: Vladimir
+Awards: 6
+Education: Institute of Control Sciences, Russian Academy of Sciences
+
+Surname: Vardi
+Awards: 7
+Education: Rice University
+
+Surname: Vaughan
+Awards: 7
+Education: Wilberforce University
+
+Surname: Vauquois
+Awards: 0
+Education: -no data-
+
+Surname: Vazirani
+Awards: 6
+Education: MIT
+
+Surname: Veloso
+Awards: 9
+Education: Instituto Superior Técnico
+
+Surname: Vernadat
+Awards: 0
+Education: -no data-
+
+Surname: Vilkomir
+Awards: 6
+Education: Kharkov State University
+
+Surname: Vitányi
+Awards: 8
+Education: Delft University of Technology
+
+Surname: Viterbi
+Awards: 2
+Education: Massachusetts Institute of Technology
+
+Surname: Vixie
+Awards: 0
+Education: Keio University
+
+--------------------------
+> Surnames under letter: W
+--------------------------
+
+Surname: Wada
+Awards: 0
+Education: University of Tokyo
+
+Surname: Wagner
+Awards: 0
+Education: -no data-
+
+Surname: Waltz
+Awards: 2
+Education: Massachusetts Institute of Technology
+
+Surname: Wang
+Awards: 2
+Education: Stanford University
+
+Surname: Warmuth
+Awards: 2
+Education: University of Colorado, Boulder
+
+Surname: Warren
+Awards: 0
+Education: University of Edinburgh
+
+Surname: Warwick
+Awards: 4
+Education: Imperial College London 
+
+Surname: Węglarz
+Awards: 0
+Education: Poznań University of Technology
+
+Surname: Wadler
+Awards: 4
+Education: Carnegie Mellon University 
+
+Surname: Wegner
+Awards: 3
+Education: University of London
+
+Surname: Wegstein
+Awards: 0
+Education: University of Illinois
+
+Surname: Weinberger
+Awards: 0
+Education: University of California, Berkeley
+
+Surname: Weiser
+Awards: 0
+Education: University of Michigan
+
+Surname: Weizenbaum
+Awards: 0
+Education: Wayne State University
+
+Surname: Wheeler
+Awards: 6
+Education: University of Cambridge
+
+Surname: Whittaker
+Awards: 2
+Education: University of California, Santa Cruz
+
+Surname: Widom
+Awards: 4
+Education: Cornell University
+
+Surname: Wiederhold
+Awards: 8
+Education: University of California, San Francisco
+
+Surname: Wiener
+Awards: 1
+Education: Tufts College
+
+Surname: Wijngaarden
+Awards: 4
+Education: Delft University of Technology
+
+Surname: Wilkes
+Awards: 0
+Education: Wellesley College
+
+Surname: Wilkes
+Awards: 5
+Education: University of Cambridge
+
+Surname: Wilks
+Awards: 19
+Education: University of Cambridge
+
+Surname: Wilkinson
+Awards: 3
+Education: Trinity College, Cambridge
+
+Surname: Wilson
+Awards: 6
+Education: Selwyn College, Cambridge
+
+Surname: Winograd
+Awards: 0
+Education: New York University
+
+Surname: Winograd
+Awards: 5
+Education: Colorado College
+
+Surname: Winston
+Awards: 7
+Education: -no data-
+
+Surname: Wirth
+Awards: 5
+Education: BS , ETH Zurich 
+
+Surname: Wiseman
+Awards: 0
+Education: University of Cambridge
+
+Surname: Wolfram
+Awards: 4
+Education: St. John's College, Oxford 
+
+Surname: Woodger
+Awards: 0
+Education: University College London
+
+Surname: Woodward
+Awards: 3
+Education: Oxford University
+
+Surname: Worsley
+Awards: 5
+Education: University of Toronto
+
+Surname: Wozniak
+Awards: 13
+Education: -no data-
+
+Surname: Wu
+Awards: 0
+Education: -no data-
+
+Surname: William
+Awards: 0
+Education: University of Illinois Urbana-Champaign
+
+--------------------------
+> Surnames under letter: Y
+--------------------------
+
+Surname: Yannakakis
+Awards: 1
+Education: National Technical University of Athens
+
+Surname: Yao
+Awards: 1
+Education: National Taiwan University
+
+Surname: Yen
+Awards: 2
+Education: University of California, Berkeley
+
+Surname: Yoneda
+Awards: 0
+Education: University of Tokyo
+
+Surname: Yourdon
+Awards: 4
+Education: Massachusetts Institute of Technology
+
+Surname: Yung
+Awards: 6
+Education: Columbia University
+
+--------------------------
+> Surnames under letter: Z
+--------------------------
+
+Surname: Zadeh
+Awards: 4
+Education: University of Tehran
+
+Surname: Zaman
+Awards: 0
+Education: -no data-
+
+Surname: Zdonik
+Awards: 0
+Education: Massachusetts Institute of Technology
+
+Surname: Zedan
+Awards: 0
+Education: University of Bristol
+
+Surname: Zilberstein
+Awards: 6
+Education: University of California, Berkeley
+
+Surname: Zimmerman
+Awards: 0
+Education: -no data-
+
+Surname: Zuse
+Awards: 5
+Education: Technical University of Berlin
+
+
+Total Scientists Included: 591
+93 scientists excluded from the final list, due to not meeting the data criteria
