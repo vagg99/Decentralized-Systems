@@ -1,0 +1,55 @@
+Failed Entries:
+
+Booch - https://en.wikipedia.org/wiki/Grady_Booch
+Boole - https://en.wikipedia.org/wiki/George_Boole
+Boyer - https://en.wikipedia.org/wiki/Robert_S._Boyer
+Bresenham - https://en.wikipedia.org/wiki/Jack_E._Bresenham
+Caspersen - https://en.wikipedia.org/wiki/Michael_E._Caspersen
+Cerf - https://en.wikipedia.org/wiki/Vint_Cerf
+Cocke - https://en.wikipedia.org/wiki/John_Cocke_(computer_scientist)
+Cook - https://en.wikipedia.org/wiki/Stephen_Cook
+Davis - https://en.wikipedia.org/wiki/Terry_A._Davis
+Demaine - https://en.wikipedia.org/wiki/Erik_Demaine
+Eich - https://en.wikipedia.org/wiki/Brendan_Eich
+Estridge - https://en.wikipedia.org/wiki/Philip_Don_Estridge
+Finkel - https://en.wikipedia.org/wiki/Raphael_Finkel
+Flake - https://en.wikipedia.org/wiki/Gary_William_Flake
+Floyd - https://en.wikipedia.org/wiki/Robert_W._Floyd
+Foley - https://en.wikipedia.org/wiki/James_D._Foley
+Friedman - https://en.wikipedia.org/wiki/Daniel_P._Friedman
+Goguen - https://en.wikipedia.org/wiki/Joseph_Goguen
+Gutknecht - https://en.wikipedia.org/wiki/J%C3%BCrg_Gutknecht
+Hellman - https://en.wikipedia.org/wiki/Martin_Hellman
+Hennessy - https://en.wikipedia.org/wiki/John_L._Hennessy
+Hopcroft - https://en.wikipedia.org/wiki/John_Hopcroft
+Humphrey - https://en.wikipedia.org/wiki/Watts_Humphrey
+Iverson - https://en.wikipedia.org/wiki/Kenneth_E._Iverson
+Kernighan - https://en.wikipedia.org/wiki/Brian_Kernighan
+Leslie - https://en.wikipedia.org/wiki/Leslie_Lamport
+Lenat - https://en.wikipedia.org/wiki/Douglas_Lenat
+Levchin - https://en.wikipedia.org/wiki/Max_Levchin
+Luckham - https://en.wikipedia.org/wiki/David_Luckham
+McIlroy - https://en.wikipedia.org/wiki/Douglas_McIlroy
+Marshall - https://en.wikipedia.org/wiki/Marshall_Kirk_McKusick
+Moler - https://en.wikipedia.org/wiki/Cleve_Moler
+Moravec - https://en.wikipedia.org/wiki/Hans_Moravec
+Morgan - https://en.wikipedia.org/wiki/Carroll_Morgan_(computer_scientist)
+Noe - https://en.wikipedia.org/wiki/Jerre_Noe
+Nygaard - https://en.wikipedia.org/wiki/Kristen_Nygaard
+Ousterhout - https://en.wikipedia.org/wiki/John_Ousterhout
+Patt - https://en.wikipedia.org/wiki/Yale_Patt
+Paterson - https://en.wikipedia.org/wiki/Mike_Paterson
+Perlis - https://en.wikipedia.org/wiki/Alan_Perlis
+Pnueli - https://en.wikipedia.org/wiki/Amir_Pnueli
+Ron - https://en.wikipedia.org/wiki/Ron_Rivest
+Shannon - https://en.wikipedia.org/wiki/Claude_Shannon
+Sutherland - https://en.wikipedia.org/wiki/Bert_Sutherland
+Sutherland - https://en.wikipedia.org/wiki/Ivan_Sutherland
+Tarjan - https://en.wikipedia.org/wiki/Robert_Tarjan
+Torvalds - https://en.wikipedia.org/wiki/Linus_Torvalds
+Vauquois - https://en.wikipedia.org/wiki/Bernard_Vauquois
+Winston - https://en.wikipedia.org/wiki/Patrick_Winston
+Wozniak - https://en.wikipedia.org/wiki/Steve_Wozniak
+Zaman - https://en.wikipedia.org/wiki/Arif_Zaman
+
+Total Failed Entries: 51

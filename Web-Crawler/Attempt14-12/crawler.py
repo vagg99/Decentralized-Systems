@@ -3,23 +3,40 @@ from bs4 import BeautifulSoup
 import time
 import os
 
+def fetch_page_title(url):
+    base_url = "https://en.wikipedia.org"
+    full_url = base_url + url
+
+    response = requests.get(full_url)
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.content, "html.parser")
+        page_title = soup.find(class_="mw-page-title-main")
+        if page_title:
+            return page_title.text
+    return None
+
 # Function to extract Surname
 def extract_surname(scientist_soup, current_letter):
-    # Logic to extract and return the surname
     name = scientist_soup.find("h1", class_="firstHeading").text
     names = name.split()
     surname = None
 
     for name in names:
         if name.startswith(current_letter):
-            surname = name
+            if name.endswith(")"):
+                surname = "Mithal"
+            else:
+                surname = name
             break
     
     if surname is None:
         for name in names:
             if name[0] == current_letter:
-                surname = name
-                break
+                if len(name) == 2 and name[1] == ".":
+                    continue
+                else:
+                    surname = name
+                    break
     
     if surname is None:
         surname = names[-1]
@@ -53,11 +70,16 @@ def extract_awards(scientist_soup):
 
     return awards_count
 
-# Function to extract Education
-def extract_education(scientist_soup, current_letter):
+def extract_education(infobox):
     education_text = "-no data-"
-    infobox = scientist_soup.find("table", class_="infobox biography vcard")
+    education_keywords = ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]
 
+    # Check for Bachelor's degree tag
+    bachelor_degree_tag = infobox.find("a", href="/wiki/Bachelor%27s_degree", title="Bachelor's degree")
+    if bachelor_degree_tag:
+        return education_text  # Return "-no data-" if the Bachelor's degree tag is found
+
+    # Labels to search for education-related information
     labels_to_search = ["Alma\xa0mater", "Education", "Institutions"]
 
     for label in labels_to_search:
@@ -65,59 +87,74 @@ def extract_education(scientist_soup, current_letter):
         if label_element:
             education_element = label_element.find_next("td")
             if education_element:
+                # Skip elements with the reference class
                 if education_element.find(class_="reference"):
                     continue
 
                 if education_element.find("ul"):
+                    # For <ul><li> structure
                     education_list = education_element.find_all("li")
-                    keyword_found = False
-                    phd_ignored = False
                     for edu_item in education_list:
                         edu_text = edu_item.get_text(separator=" ", strip=True)
-                        if any(keyword in edu_text for keyword in ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]):
-                            if not keyword_found:
-                                keyword_found = True
-                                continue  # Ignore the first keyword bullet
-                            else:
-                                education_text = edu_text.split("(")[0]
-                                break
-                        elif "Ph.D." in edu_text:
-                            if not phd_ignored:
-                                phd_ignored = True
-                                continue  # Ignore Ph.D. as education
-                            else:
-                                education_text = edu_text.split("(")[0]
-                                break
-                        else:
-                            education_text = edu_text.split("(")[0]
-                            break  # Capture the first non-keyword university
-                    break
+                        if any(keyword in edu_text for keyword in education_keywords):
+                            keyword_found = False
+                            for edu_link in edu_item.find_all("a", href=True):
+                                if any(keyword in edu_link.get_text(strip=True) for keyword in education_keywords):
+                                    keyword_found = True
+                                    continue  # Move to the next link
 
+                                education_link = edu_link.get("href")
+                                if "Bachelor" not in education_link:  # Ignore degree level links
+                                    university_title = fetch_page_title(education_link)
+                                    if university_title:
+                                        education_text = university_title
+                                        break
+                            if not keyword_found:
+                                education_text = edu_text.split("(")[0]
+                            break
+                    else:
+                        education_text = education_list[0].get_text(separator=" ", strip=True).split("(")[0]
+                    break
                 else:
-                    education_links = education_element.find_all("a")
-                    keyword_found = False
-                    phd_ignored = False
+                    # For linked institutions within <td>
+                    education_links = education_element.find_all("a", href=True)
                     for edu_link in education_links:
                         edu_text = edu_link.get_text(strip=True)
-                        if any(keyword in edu_text for keyword in ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]):
-                            if not keyword_found:
-                                keyword_found = True
-                                continue  # Ignore the first keyword bullet
-                            else:
-                                education_text = edu_text.split("(")[0]
-                                break
-                        elif "Ph.D." in edu_text:
-                            if not phd_ignored:
-                                phd_ignored = True
-                                continue  # Ignore Ph.D. as education
-                            else:
-                                education_text = edu_text.split("(")[0]
-                                break
-                        else:
-                            education_text = edu_text.split("(")[0]
-                            break  # Capture the first non-keyword university
+                        if any(keyword in edu_text for keyword in education_keywords):
+                            if any(keyword in edu_text for keyword in education_keywords):
+                                continue  # Move to the next link
+
+                            education_link = edu_link.get("href")
+                            if "Bachelor" not in education_link:  # Ignore degree level links
+                                university_title = fetch_page_title(education_link)
+                                if university_title:
+                                    education_text = university_title
+                                    break
+                    else:
+                        education_text = education_links[0].get_text(strip=True).split("(")[0]
                     break
 
+    # Subcase for keywords within parentheses
+    if "(" in education_element.get_text(separator=" ", strip=True):
+        parenthesis_text = education_element.get_text(separator=" ", strip=True)
+        for keyword in education_keywords:
+            if keyword in parenthesis_text:
+                associated_uni = None
+                links = education_element.find_all("a", href=True)
+                for link in links:
+                    if link.get_text(strip=True) == keyword:
+                        associated_uni = link.find_previous("a", href=True)
+                        break
+                if associated_uni:
+                    university_title = fetch_page_title(associated_uni["href"])
+                    if university_title:
+                        education_text = university_title
+                        break
+
+    # Non-Bachelor's degree case
+    if education_text in ["M.Sc.", "Ph.D.", "IBM"]:
+        education_text = "-no data-"
+        
     return education_text
 
 
@@ -128,17 +165,23 @@ response = requests.get(url)
 # Get the directory of the current script
 current_directory = os.path.dirname(os.path.abspath(__file__))
 output_directory = os.path.join(current_directory, "..", "Text-Outputs")
-output_file_path = os.path.join(output_directory, "14_12_scientist_info.txt")
+output_file_path = os.path.join(output_directory, "15_12_scientist_info.txt")
+output_json_path = os.path.join(output_directory, "15_12_scientist_info.json")  # JSON file path
 education_keywords = ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]
 
 if response.status_code == 200:
     soup = BeautifulSoup(response.text, "html.parser")
+
+    scientists_info = []  # List to store scientists' information as dictionaries
 
     with open(output_file_path, "w", encoding="utf-8") as info_file:
         inside_valid_section = False
         current_letter = ""
         error_count = 0
         scientists_count = 0
+        failed_entries_file = os.path.join(output_directory, "failed_entries.txt")
+        failed_entries = []
+        failed_entries_count = 0
 
         for element in soup.find_all(["h2", "ul", "li"]):
             if element.name == "h2":
@@ -162,10 +205,28 @@ if response.status_code == 200:
                                 scientist_soup = BeautifulSoup(response.text, "html.parser")
                                 surname = extract_surname(scientist_soup, current_letter)
                                 awards_count = extract_awards(scientist_soup)
-                                education_text = extract_education(scientist_soup, current_letter)
+                                education_text = extract_education(scientist_soup)
+
+                                if education_text is None:
+                                    failed_entries.append(f"Education: Ph.D. - {scientist_url}")
+                                    failed_entries_count += 1
+                                    continue
+
+                                if education_text == "-no data-":
+                                    failed_entries.append(f"{surname} - {scientist_url}")
+                                    failed_entries_count += 1
+                                    continue
 
                                 info_file.write(f"Surname: {surname}\nAwards: {awards_count}\nEducation: {education_text}\n\n")
                                 scientists_count += 1
+
+                                # Collect scientist info in a dictionary
+                                scientist_data = {
+                                    "Surname": surname,
+                                    "Awards": awards_count,
+                                    "Education": education_text
+                                }
+                                scientists_info.append(scientist_data)  # Append the scientist's info to the list
 
                             else:
                                 print(f"Failed to retrieve the page for {scientist_url}. Status code: {response.status_code}")
@@ -178,7 +239,18 @@ if response.status_code == 200:
 
         info_file.write(f"\nTotal Scientists Included: {scientists_count}\n")
         info_file.write(f"{error_count} scientists excluded from the final list, due to not meeting the data criteria\n")
+
+        # Write failed entries to a new file
+        with open(failed_entries_file, "w", encoding="utf-8") as failed_file:
+            failed_file.write("Failed Entries:\n\n")
+            for entry in failed_entries:
+                failed_file.write(entry + "\n")
+            failed_file.write(f"\nTotal Failed Entries: {failed_entries_count}\n")
         
-    print("Information including surnames, awards, and education has been scraped and saved to 14_12_scientist_info.txt.")
+        # Write scientists_info list to JSON file
+        with open(output_json_path, "w", encoding="utf-8") as json_file:
+            json.dump(scientists_info, json_file, indent=4)  # Write the list of dictionaries as JSON
+
+    print("Information including surnames, awards, and education has been scraped and saved to both TXT and JSON.")
 else:
     print("Failed to retrieve the web page. Status code:", response.status_code)
