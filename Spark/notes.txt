@@ -1,0 +1,3 @@
+databricks files :
+temperature : "/FileStore/tables/tempm.txt"
+humidity : "/FileStore/tables/hum.txt"
