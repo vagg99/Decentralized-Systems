@@ -141,6 +141,8 @@ class Node:
         if operation == "get_predecessor":
             # print("getting predecessor")
             result = self.get_predecessor()
+        if operation == "set_predecessor":
+            self.set_predecessor(int(args[0]),args[1],args[2])
 
         if operation == "get_id":
             # print("getting id")
@@ -293,6 +295,12 @@ class Node:
         ip,port = self.get_ip_port(predecessor)
         # print(ip ,port , "in find successor, data of predecesor")
         data = self.request_handler.send_message(ip , port, "get_successor")
+
+        if data == "Error":
+            print("Error contacting node. Trying again in 15 seconds")
+            time.sleep(15)
+            data = self.find_successor(search_id)
+
         return data
     def closest_preceding_node(self, search_id):
         closest_node = None
@@ -338,18 +346,41 @@ class Node:
 
             if self.successor.ip == self.ip  and self.successor.port == self.port:
                 time.sleep(10)
+
             result = self.request_handler.send_message(self.successor.ip , self.successor.port , data)
+
+
             if result == "None" or len(result) == 0:
                 self.request_handler.send_message(self.successor.ip , self.successor.port, "notify|"+ str(self.id) + "|" + self.nodeinfo.__str__())
                 continue
 
+            if result == "Error":
+                print("Error contacting successor")
+                old_successor = self.successor
+                self.successor = self
+                self.predecessor = None
+                for i in range(m):
+                    print("here")
+                    if self.finger_table.table[i][1] is not None and self.finger_table.table[i][1].ip!= old_successor.ip:
+                        self.successor = self.finger_table.table[i][1]
+                        print("here2")
+                        break
+                continue
+                
+
             # print("found predecessor of my sucessor", result, self.successor.id)
             ip , port = self.get_ip_port(result)
-            result = int(self.request_handler.send_message(ip,port,"get_id"))
-            if self.get_backward_distance(result) > self.get_backward_distance(self.successor.id):
-                # print("changing my succ in stablaize", result)
-                self.successor = Node(ip,port)
-                self.finger_table.table[0][1] = self.successor
+            result = self.request_handler.send_message(ip,port,"get_id")
+            if result == "Error":
+                self.request_handler.send_message(self.successor.ip , self.successor.port, "set_predecessor|"+ str(self.id) + "|" + self.nodeinfo.__str__())
+                
+            else:
+                result = int(result)
+                if self.get_backward_distance(result) > self.get_backward_distance(self.successor.id):
+                    # print("changing my succ in stablaize", result)
+                    self.successor = Node(ip,port)
+                    self.finger_table.table[0][1] = self.successor
+
             self.request_handler.send_message(self.successor.ip , self.successor.port, "notify|"+ str(self.id) + "|" + self.nodeinfo.__str__())
             print("===============================================")
             print("STABILIZING")
@@ -383,6 +414,7 @@ class Node:
                 # print("changing my pred", node_id)
                 self.predecessor = Node(node_ip,int(node_port))
                 return
+                
         if self.predecessor is None or self.predecessor == "None" or ( node_id > self.predecessor.id and node_id < self.id ) or ( self.id == self.predecessor.id and node_id != self.id) :
             # print("someone notified me")
             # print("changing my pred", node_id)
@@ -391,7 +423,7 @@ class Node:
                 # print("changing my succ", node_id)
                 self.successor = Node(node_ip,int(node_port))
                 self.finger_table.table[0][1] = self.successor
-        
+            
     def fix_fingers(self):
         '''
         The fix_fingers function is used to correct the finger table at regular interval of time this function waits for
@@ -425,6 +457,13 @@ class Node:
         if self.predecessor is None:
             return "None"
         return self.predecessor.nodeinfo.__str__()
+    
+    def set_predecessor(self, node_id, node_ip, node_port):
+        '''
+        This function is used to set the predecessor
+        '''
+        self.predecessor = Node(node_ip, node_port)
+
     def get_id(self):
         '''
         This function is used to return the id of the node
@@ -502,12 +541,15 @@ class RequestHandler:
     def send_message(self, ip, port, message):
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM) 
   
-        # connect to server on local computer 
-        s.connect((ip,port)) 
-        s.send(message.encode('utf-8')) 
-        data = s.recv(1024) 
-        s.close()
-        return data.decode("utf-8") 
+        try:
+            # connect to server on local computer 
+            s.connect((ip,port)) 
+            s.send(message.encode('utf-8')) 
+            data = s.recv(1024) 
+            s.close()
+            return data.decode("utf-8")
+        except:
+            return "Error"
         
 
 # The ip = "127.0.0.1" signifies that the node is executing on the localhost
