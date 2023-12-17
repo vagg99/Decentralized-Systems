@@ -3,10 +3,6 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-# Grab the name as shown in the individual scientist's Wikipedia page
-# The text shown right class="after mw-page-title-main"
-
-
 def fetch_page_title(url):
     base_url = "https://en.wikipedia.org"
     full_url = base_url + url
@@ -19,6 +15,7 @@ def fetch_page_title(url):
             return page_title.text
     return None
 
+# Function to extract Surname
 def extract_surname(scientist_soup, current_letter):
     name = scientist_soup.find("h1", class_="firstHeading").text
     names = name.split()
@@ -52,6 +49,7 @@ def extract_surname(scientist_soup, current_letter):
     
     return surname
 
+# Function to extract Awards
 def extract_awards(scientist_soup):
     infobox = scientist_soup.find("table", class_="infobox biography vcard")
     awards_count = 0
@@ -79,7 +77,7 @@ def extract_education(infobox):
     # Check for Bachelor's degree tag
     bachelor_degree_tag = infobox.find("a", href="/wiki/Bachelor%27s_degree", title="Bachelor's degree")
     if bachelor_degree_tag:
-        return education_text  # Return "-no data-" if the Bachelor's degree tag is found
+        return education_text  # Return "-no data-" if the string "Bachelor's degree" is found
 
     # Labels to search for education-related information
     labels_to_search = ["Alma\xa0mater", "Education", "Institutions"]
@@ -94,7 +92,11 @@ def extract_education(infobox):
                     continue
 
                 if education_element.find("ul"):
-                    # For <ul><li> structure
+                    # For structure
+                    # <ul>
+                    #   <li> </li>
+                    #   ...
+                    # </ul> 
                     education_list = education_element.find_all("li")
                     for edu_item in education_list:
                         edu_text = edu_item.get_text(separator=" ", strip=True)
@@ -154,56 +156,105 @@ def extract_education(infobox):
                         break
 
     # Non-Bachelor's degree case
-    if education_text in ["M.Sc.", "Ph.D.", "IBM"]:
+    if education_text in ["M.Sc.", "Ph.D.", "D.Phil.", "IBM"]:
         education_text = "-no data-"
         
     return education_text
 
-def scrape_scientist_info(scientist_name):
-    url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
-    response = requests.get(url)
-    scientist_url = None
 
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.text, "html.parser")
+# Main code
+url = "https://en.wikipedia.org/wiki/List_of_computer_scientists"
+
+response = requests.get(url)
+# Get the directory of the current script
+current_directory = os.path.dirname(os.path.abspath(__file__))
+output_directory = os.path.join(current_directory, "..", "Text-Outputs")
+output_file_path = os.path.join(output_directory, "15_12_scientist_info.txt")
+output_json_path = os.path.join(output_directory, "15_12_scientist_info.json")  # JSON file path
+education_keywords = ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]
+
+if response.status_code == 200:
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    scientists_info = []  # List to store scientists' information as dictionaries
+
+    with open(output_file_path, "w", encoding="utf-8") as info_file:
+        inside_valid_section = False
+        current_letter = ""
+        error_count = 0
+        scientists_count = 0
+        failed_entries_file = os.path.join(output_directory, "failed_entries.txt")
+        failed_entries = []
+        failed_entries_count = 0
 
         for element in soup.find_all(["h2", "ul", "li"]):
-            if element.name == "ul":
+            if element.name == "h2":
+                section_title = element.find("span", class_="mw-headline")
+                if section_title and section_title.text.isalpha() and len(section_title.text) == 1:
+                    inside_valid_section = True
+                    current_letter = section_title.text
+                    info_file.write("--------------------------\n> Surnames under letter: " + current_letter + "\n--------------------------\n\n" )  
+
+                else:
+                    inside_valid_section = False
+            elif element.name == "ul" and inside_valid_section:
                 for li in element.find_all("li"):
-                    link = li.find("a", title=scientist_name)
+                    link = li.find("a")
                     if link:
                         scientist_url = f"https://en.wikipedia.org{link.get('href')}"
-                        break
-                if scientist_url:
-                    break
+                        try:
+                            response = requests.get(scientist_url, timeout=10)
 
-    if scientist_url:
-        try:
-            response = requests.get(scientist_url, timeout=10)
+                            if response.status_code == 200:
+                                scientist_soup = BeautifulSoup(response.text, "html.parser")
+                                surname = extract_surname(scientist_soup, current_letter)
+                                awards_count = extract_awards(scientist_soup)
+                                education_text = extract_education(scientist_soup)
 
-            if response.status_code == 200:
-                scientist_soup = BeautifulSoup(response.text, "html.parser")
-                surname = extract_surname(scientist_soup, scientist_name[0])
-                awards_count = extract_awards(scientist_soup)
-                education_text = extract_education(scientist_soup)
+                                if education_text is None:
+                                    failed_entries.append(f"Education: Ph.D. - {scientist_url}")
+                                    failed_entries_count += 1
+                                    continue
 
-                return {
-                    "Surname": surname,
-                    "Awards": awards_count,
-                    "Education": education_text
-                }
+                                if education_text == "-no data-":
+                                    failed_entries.append(f"{surname} - {scientist_url}")
+                                    failed_entries_count += 1
+                                    continue
 
-        except Exception as e:
-            print(f"An error occurred while processing {scientist_url}: {str(e)}")
-    else:
-        print(f"Scientist '{scientist_name}' not found in the list.")
+                                info_file.write(f"Surname: {surname}\nAwards: {awards_count}\nEducation: {education_text}\n\n")
+                                scientists_count += 1
 
-    return None
+                                # Collect scientist info in a dictionary
+                                scientist_data = {
+                                    "Surname": surname,
+                                    "Awards": awards_count,
+                                    "Education": education_text
+                                }
+                                scientists_info.append(scientist_data)  # Append the scientist's info to the list
 
-scientist_name = input("Enter the name of the scientist you want to scrape: ")
-scientist_info = scrape_scientist_info(scientist_name)
+                            else:
+                                print(f"Failed to retrieve the page for {scientist_url}. Status code: {response.status_code}")
 
-if scientist_info:
-    print(f"\nInformation for {scientist_name}:")
-    for key, value in scientist_info.items():
-        print(f"{key}: {value}")
+                            time.sleep(1)
+                        
+                        except Exception as e:
+                            error_count += 1
+                            print(f"{error_count}) An error occurred while processing {scientist_url}: {str(e)}")
+
+        info_file.write(f"\nTotal Scientists Included: {scientists_count}\n")
+        info_file.write(f"{error_count} scientists excluded from the final list, due to not meeting the data criteria\n")
+
+        # Write failed entries to a new file
+        with open(failed_entries_file, "w", encoding="utf-8") as failed_file:
+            failed_file.write("Failed Entries:\n\n")
+            for entry in failed_entries:
+                failed_file.write(entry + "\n")
+            failed_file.write(f"\nTotal Failed Entries: {failed_entries_count}\n")
+        
+        # Write scientists_info list to JSON file
+        with open(output_json_path, "w", encoding="utf-8") as json_file:
+            json.dump(scientists_info, json_file, indent=4)  # Write the list of dictionaries as JSON
+
+    print("Information including surnames, awards, and education has been scraped and saved to both TXT and JSON.")
+else:
+    print("Failed to retrieve the web page. Status code:", response.status_code)

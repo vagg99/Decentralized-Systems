@@ -47,9 +47,10 @@ Sutherland - https://en.wikipedia.org/wiki/Bert_Sutherland
 Sutherland - https://en.wikipedia.org/wiki/Ivan_Sutherland
 Tarjan - https://en.wikipedia.org/wiki/Robert_Tarjan
 Torvalds - https://en.wikipedia.org/wiki/Linus_Torvalds
+Turner - https://en.wikipedia.org/wiki/David_Turner_(computer_scientist)
 Vauquois - https://en.wikipedia.org/wiki/Bernard_Vauquois
 Winston - https://en.wikipedia.org/wiki/Patrick_Winston
 Wozniak - https://en.wikipedia.org/wiki/Steve_Wozniak
 Zaman - https://en.wikipedia.org/wiki/Arif_Zaman
 
-Total Failed Entries: 51
+Total Failed Entries: 52
