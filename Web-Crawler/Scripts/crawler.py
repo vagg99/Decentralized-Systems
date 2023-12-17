@@ -204,8 +204,8 @@ response = requests.get(url)
 # Get the directory of the current script
 current_directory = os.path.dirname(os.path.abspath(__file__))
 output_directory = os.path.join(current_directory, "..", "Text-Outputs")
-output_file_path = os.path.join(output_directory, "16_12_scientist_info.txt")
-output_json_path = os.path.join(output_directory, "16_12_scientist_info.json")  # JSON file path
+output_file_path = os.path.join(output_directory, "final_scientist_info.txt")
+output_json_path = os.path.join(output_directory, "final_scientist_info.json")  # JSON file path
 education_keywords = ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]
 
 if response.status_code == 200:
