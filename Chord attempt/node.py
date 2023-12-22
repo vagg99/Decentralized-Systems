@@ -141,6 +141,7 @@ class Node:
         if operation == "get_predecessor":
             # print("getting predecessor")
             result = self.get_predecessor()
+            
         if operation == "set_predecessor":
             self.set_predecessor(int(args[0]),args[1],args[2])
 
@@ -292,6 +293,12 @@ class Node:
         # print("predcessor found is ", predecessor)
         if(predecessor == "None"):
             return "None"
+        
+        if(predecessor == "Error"):
+            print("Error contacting node. Trying again in 15 seconds")
+            time.sleep(15)
+            return self.find_successor(search_id)
+        
         ip,port = self.get_ip_port(predecessor)
         # print(ip ,port , "in find successor, data of predecesor")
         data = self.request_handler.send_message(ip , port, "get_successor")
@@ -299,9 +306,10 @@ class Node:
         if data == "Error":
             print("Error contacting node. Trying again in 15 seconds")
             time.sleep(15)
-            data = self.find_successor(search_id)
+            return self.find_successor(search_id)
 
         return data
+    
     def closest_preceding_node(self, search_id):
         closest_node = None
         min_distance = pow(2,m)+1
@@ -360,10 +368,10 @@ class Node:
                 self.successor = self
                 self.predecessor = None
                 for i in range(m):
-                    print("here")
+                    #print("here")
                     if self.finger_table.table[i][1] is not None and self.finger_table.table[i][1].ip!= old_successor.ip:
                         self.successor = self.finger_table.table[i][1]
-                        print("here2")
+                        #print("here2")
                         break
                 continue
                 
