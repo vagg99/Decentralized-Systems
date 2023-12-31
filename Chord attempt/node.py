@@ -51,6 +51,7 @@ class Node:
         self.successor = None
         self.finger_table = FingerTable(self.id)
         self.data_store = DataStore()
+        self.backup_data_store = DataStore()
         self.request_handler = RequestHandler()
     
     def hash(self, message):
@@ -77,6 +78,21 @@ class Node:
             key = data[0]
             value = data[1]
             self.data_store.insert(key, value)
+            result = 'Inserted'
+
+            '''#Backup insert
+            predecessor = self.get_predecessor()
+            while predecessor == "None":
+                time.sleep(15)
+                predecessor = self.get_predecessor()
+            ip, port = self.get_ip_port(self.get_predecessor())
+            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(value) )'''
+
+        if operation == 'insert_backup':
+            data = message.split('|')[1].split(":") 
+            key = data[0]
+            value = data[1]
+            self.backup_data_store.insert(key, value)
             result = 'Inserted'
 
         if operation == "delete_server":
@@ -144,6 +160,12 @@ class Node:
             
         if operation == "set_predecessor":
             self.set_predecessor(int(args[0]),args[1],args[2])
+            
+            ''' #Perform backup on the new predecessor
+            ip = args[1]
+            port = args[2]
+            for key in self.data_store.data:
+                self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(self.data_store.data[key]))'''
 
         if operation == "get_id":
             # print("getting id")
@@ -220,7 +242,6 @@ class Node:
         self.request_handler.send_message(ip,port,"delete_server|" + str(key) )
         return "deleted at node id " + str(Node(ip,port).id) + " key was " + str(key) + " key hash was " + str(id_of_key)
 
-
     def search_key(self,key):
         '''
         The function to handle the incoming key_value pair search request from the client this function searches for the
@@ -234,7 +255,21 @@ class Node:
         data = self.request_handler.send_message(ip,port,"search_server|" + str(key) )
         return data
 
+    def backup (self):
+        predecessor = self.get_predecessor()
+        if predecessor == "None" or predecessor == self.nodeinfo.__str__():
+            return
+        ip, port = self.get_ip_port(self.get_predecessor())
+        
+        for key in self.data_store.data:
+            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(self.data_store.data[key]) )
 
+    def restore_backup(self):
+        ip, port = self.get_ip_port(self.get_successor())
+
+        for key in self.backup_data_store.data:
+            self.request_handler.send_message(ip,port,"insert_server|" + str(key) + ":" + str(self.backup_data_store.data[key]))
+    
     def join_request_from_other_node(self, node_id):
         """ will return successor for the node who is requesting to join """
         return self.find_successor(node_id)
@@ -368,11 +403,12 @@ class Node:
                 self.successor = self
                 self.predecessor = None
                 for i in range(m):
-                    #print("here")
-                    if self.finger_table.table[i][1] is not None and self.finger_table.table[i][1].ip!= old_successor.ip:
+                
+                    if self.finger_table.table[i][1] is not None and self.finger_table.table[i][1].id!= old_successor.id:
                         self.successor = self.finger_table.table[i][1]
-                        #print("here2")
                         break
+
+                self.restore_backup()
                 continue
                 
 
@@ -388,6 +424,8 @@ class Node:
                     # print("changing my succ in stablaize", result)
                     self.successor = Node(ip,port)
                     self.finger_table.table[0][1] = self.successor
+
+            self.backup()
 
             self.request_handler.send_message(self.successor.ip , self.successor.port, "notify|"+ str(self.id) + "|" + self.nodeinfo.__str__())
             print("===============================================")
@@ -405,6 +443,10 @@ class Node:
             print("DATA STORE")
             print("===============================================")
             print(str(self.data_store.data))
+            print("===============================================")
+            print("BACKUP DATA STORE")
+            print("===============================================")
+            print(str(self.backup_data_store.data))
             print("===============================================")
             print("+++++++++++++++ END +++++++++++++++++++++++++++")
             print()
