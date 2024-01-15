@@ -62,7 +62,7 @@ class Node:
         self.port = int(port)
         self.nodeinfo = NodeInfo(ip, port)
         self.id = self.hash(str(self.nodeinfo))
-        # print(self.id)
+        print(self.id)
         self.predecessor = None
         self.successor = None
         self.finger_table = FingerTable(self.id)
@@ -271,10 +271,11 @@ class Node:
         check = self.request_handler.send_message(ip,port,"check_backup|")
         print("port: ", self.port, "| check_status: ", check)
 
+        temp = self.data_store.data
         
-        for key in self.data_store.data:
+        for key in temp:
             # print("key: ", str(key), ", val: ", str(self.data_store.data[key]), "pred_ip: ",ip, ", pred_port: ", port)
-            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(self.data_store.data[key]) )
+            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(temp[key]) )
 
     def restore_backup(self):
         ip, port = self.get_ip_port(self.get_successor())
@@ -429,7 +430,7 @@ class Node:
                 
             #print("found predecessor of my successor", result, self.successor.id)
             ip , port = self.get_ip_port(result)
-            result = int(self.request_handler.send_message(ip,port,"get_id"))
+            result = self.request_handler.send_message(ip,port,"get_id")
             if result == "Error":
                 self.request_handler.send_message(self.successor.ip , self.successor.port, "set_predecessor|"+ str(self.id) + "|" + self.nodeinfo.__str__())
                 
