@@ -5,7 +5,6 @@ import hashlib
 import random
 import sys
 import os
-from copy import deepcopy
 
 m = 7
 ip = '127.0.0.1'
@@ -21,15 +20,22 @@ class DataStore:
         if key not in self.data:  # if first entry for this key
             self.data[key] = value
         else:
+            if self.data[key] == value:   # if trying to insert key-value pair that already exists
+                return
+            
             value_list = []
             if self.data[key].count(',') == 1: # if second entry for this key
                 value_list = [self.data[key]]
-            else:  # if >= third entry for this key
+            else:                       # if >= third entry for this key
+                for obj in self.data[key]:   # if the key-value pair about to be inserted already exists (in case only part of the key-value pair matches)
+                    if obj == value:     
+                        return
+
                 value_list.extend(self.data[key])
             value_list.append(value)
             self.data[key] = value_list
-    def delete(self, key):
-        del self.data[key]
+            
+    
     def search(self, search_key):
         # print('Search key', search_key)
         
@@ -47,6 +53,7 @@ class NodeInfo:
         self.port = port
     def __str__(self):
         return self.ip + "|" + str(self.port)  
+    
 # The class Node is used to manage the each node that, it contains all the information about the node like ip, port,
 # the node's successor, finger table, predecessor etc. 
 class Node:
@@ -55,7 +62,7 @@ class Node:
         self.port = int(port)
         self.nodeinfo = NodeInfo(ip, port)
         self.id = self.hash(str(self.nodeinfo))
-        # print(self.id)
+        print(self.id)
         self.predecessor = None
         self.successor = None
         self.finger_table = FingerTable(self.id)
@@ -65,7 +72,7 @@ class Node:
     
     def hash(self, message):
         '''
-        This function is used to find the id of any string and hence find it's correct position in the ring
+        This function is used to find the id of any string and hence find its correct position in the ring
         '''
         digest = hashlib.sha256(message.encode()).hexdigest()
         digest = int(digest, 16) % pow(2,m)
@@ -97,6 +104,7 @@ class Node:
             ip, port = self.get_ip_port(self.get_predecessor())
             self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(value) )'''
 
+
         if operation == 'insert_backup':
             data = message.split('|')[1].split(":") 
             key = data[0]
@@ -104,15 +112,11 @@ class Node:
             self.backup_data_store.insert(key, value)
             result = 'Inserted'
 
-        if operation == "delete_server":
-            # print('deleting in my datastore', str(self.nodeinfo))
-            data = message.split('|')[1]
-            self.data_store.data.pop(data)
-            result = 'Deleted'
 
         if operation == "search_server":
             # print('searching in my datastore', str(self.nodeinfo))
             data = message.split('|')[1]
+            
             if data in self.data_store.data:  # if the key is in the dictionary
                 if self.data_store.data[data].count(',') == 1: # if there's only one entry for this key
                     awards_num = self.data_store.data[data].split(',')[1]
@@ -143,12 +147,6 @@ class Node:
             key = data[0]
             value = data[1]
             result = self.insert_key(key,value)
-
-
-        if operation == "delete":
-            # print("finding hop to delete the key" , str(self.nodeinfo) )
-            data = message.split('|')[1]
-            result = self.delete_key(data)
 
 
         if operation == 'search':
@@ -200,7 +198,7 @@ class Node:
     
     def serve_requests(self, conn, addr):
         '''
-        The serve_requests fucntion is used to listen to incomint requests on the open port and then reply to them it 
+        The serve_requests function is used to listen to incomint requests on the open port and then reply to them it 
         takes as arguments the connection and the address of the connected device. 
         '''
         with conn:
@@ -249,19 +247,7 @@ class Node:
         self.request_handler.send_message(ip,port,"insert_server|" + str(key) + ":" + str(value) )
         return "Inserted at node id " + str(Node(ip,port).id) + " key was " + str(key) + " key hash was " + str(id_of_key)  
 
-    def delete_key(self,key):
-        '''
-        The function to handle the incoming key_value pair deletion request from the client this function searches for the
-        correct node on which the key_value pair is stored and then sends a message to that node to delete the key_val
-        pair in its data_store.
-        '''
-        id_of_key = self.hash(str(key))
-        succ = self.find_successor(id_of_key)
-        # print("Succ found for deleting key" , id_of_key , succ)
-        ip,port = self.get_ip_port(succ)
-        self.request_handler.send_message(ip,port,"delete_server|" + str(key) )
-        return "deleted at node id " + str(Node(ip,port).id) + " key was " + str(key) + " key hash was " + str(id_of_key)
-
+    
     def search_key(self,key):
         '''
         The function to handle the incoming key_value pair search request from the client this function searches for the
@@ -277,12 +263,19 @@ class Node:
 
     def backup (self):
         predecessor = self.get_predecessor()
+        
         if predecessor == "None" or predecessor == self.nodeinfo.__str__():
             return
         ip, port = self.get_ip_port(self.get_predecessor())
+
+        check = self.request_handler.send_message(ip,port,"check_backup|")
+        print("port: ", self.port, "| check_status: ", check)
+
+        temp = self.data_store.data
         
-        for key in self.data_store.data:
-            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(self.data_store.data[key]) )
+        for key in temp:
+            # print("key: ", str(key), ", val: ", str(self.data_store.data[key]), "pred_ip: ",ip, ", pred_port: ", port)
+            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(temp[key]) )
 
     def restore_backup(self):
         ip, port = self.get_ip_port(self.get_successor())
@@ -314,6 +307,7 @@ class Node:
                 if len(key_value) > 1:
                     # print(key_value.split('|'))
                     self.data_store.data[key_value.split('|')[0]] = key_value.split('|')[1]
+            
 
     def find_predecessor(self, search_id):
         '''
@@ -391,7 +385,10 @@ class Node:
                 data += str(keys) + "|" + str(self.data_store.data[keys]) + ":"
                 keys_to_be_removed.append(keys)
         for keys in keys_to_be_removed:
-            self.data_store.data.pop(keys)
+            self.data_store.data.pop(keys)   
+        
+        self.request_handler.send_message(self.ip , 90, "enable|")
+        
         return data
 
     
@@ -412,27 +409,26 @@ class Node:
 
             result = self.request_handler.send_message(self.successor.ip , self.successor.port , data)
 
-
             if result == "None" or len(result) == 0:
                 self.request_handler.send_message(self.successor.ip , self.successor.port, "notify|"+ str(self.id) + "|" + self.nodeinfo.__str__())
                 continue
 
             if result == "Error":
-                print("Error contacting successor")
+                print("Error contacting successor, retrieving backups..")
                 old_successor = self.successor
                 self.successor = self
                 self.predecessor = None
                 for i in range(m):
                 
-                    if self.finger_table.table[i][1] is not None and self.finger_table.table[i][1].id!= old_successor.id:
+                    if self.finger_table.table[i][1] is not None and self.finger_table.table[i][1].id != old_successor.id:
                         self.successor = self.finger_table.table[i][1]
                         break
 
                 self.restore_backup()
+                self.backup_data_store.data = {}
                 continue
                 
-
-            # print("found predecessor of my sucessor", result, self.successor.id)
+            #print("found predecessor of my successor", result, self.successor.id)
             ip , port = self.get_ip_port(result)
             result = self.request_handler.send_message(ip,port,"get_id")
             if result == "Error":
@@ -445,8 +441,8 @@ class Node:
                     self.successor = Node(ip,port)
                     self.finger_table.table[0][1] = self.successor
 
-            self.backup()
-
+            self.backup() 
+           
             self.request_handler.send_message(self.successor.ip , self.successor.port, "notify|"+ str(self.id) + "|" + self.nodeinfo.__str__())
             print("===============================================")
             print("STABILIZING")

@@ -1,60 +1,55 @@
 import socket
+import os
+import sys
 
 def main():
-	#ip = input("Give the ip address of a node")
+	#port = input("Give the port of a network node: ")
 	ip = "127.0.0.1"
 	port = 80
-	#query = input("Give the key for the query: ")
-	#port = int(input("Give the port number of a node: "))
     
+	port = int(input("Give the port of a network node: "))
 	while(True):
-		print("************************MENU*************************")
-		print("PRESS ***********************************************")
-		print("1. TO SEARCH *****************************************")
-		# print("2. TO SHOW ******************************************")
-		# print("3. TO DELETE *****************************************")
-		print("2. TO EXIT ******************************************")
-		print("*****************************************************")
-		choice = input()
-		sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+		
+		try:
+			sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+			sock.connect((ip,port))
+		
+			print("\n")
+			print("************************MENU*************************")
+			print("PRESS ***********************************************")
+			print("1. TO SEARCH *****************************************")
+			print("CTRL+C. TO EXIT ******************************************")
+			print("*****************************************************")
+			choice = input()
 
-		sock.connect((ip,port))
+			if(choice == '1'):
+				key = input("Enter the key to search for: ")
+				message = "search|" + str(key)
+				sock.send(message.encode('utf-8'))
+				data = sock.recv(1024)
+				data = str(data.decode('utf-8'))
+				print("The value corresponding to the key is : ",data)
 
-		# if(choice == '1'):
-		# 	key = input("Enter the key : ")
-		# 	val = input("ENTER THE VALUE : ")
-		# 	message = "insert|" + str(key) + ":" + str(val)
-		# 	sock.send(message.encode('utf-8'))
-		# 	data = sock.recv(1024)
-		# 	data = str(data.decode('utf-8'))
-		# 	print(data)
-
-		if(choice == '1'):
-			key = input("Enter the key to search for: ")
-			message = "search|" + str(key)
-			sock.send(message.encode('utf-8'))
-			data = sock.recv(1024)
-			data = str(data.decode('utf-8'))
-			print("The value corresponding to the key is : ",data)
-
-		# elif(choice == '3'):
-		# 	key = input("ENTER THE KEY")
-		# 	message = "delete|" + str(key)
-		# 	sock.send(message.encode('utf-8'))
-		# 	data = sock.recv(1024)
-		# 	data = str(data.decode('utf-8'))
-		# 	print(data)
-
-		elif(choice == '2'):
-			print("Closing the socket")
-			sock.close()
-			print("Exiting..")
-			exit()
-			
-		else:
-			print("Invalid choice!")
-
-
-
+	
+			else:
+				print("Invalid choice!")
+				
+		except KeyboardInterrupt:
+			print('Exiting..')
+			try:
+				sys.exit(0)
+			except SystemExit:
+				os._exit(0)
+		except:
+			print("Error concerning the connection, try a different port..")
+			port = int(input("Give the port of a network node: "))
+		
 if __name__ == '__main__':
-	main()
+	try:
+		main()
+	except KeyboardInterrupt:
+		print('Exiting..')
+		try:
+			sys.exit(0)
+		except SystemExit:
+			os._exit(0)
