@@ -62,7 +62,6 @@ class Node:
         self.port = int(port)
         self.nodeinfo = NodeInfo(ip, port)
         self.id = self.hash(str(self.nodeinfo))
-        print(self.id)
         self.predecessor = None
         self.successor = None
         self.finger_table = FingerTable(self.id)
