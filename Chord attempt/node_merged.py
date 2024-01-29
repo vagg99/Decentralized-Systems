@@ -34,18 +34,8 @@ class DataStore:
                 value_list.extend(self.data[key])
             value_list.append(value)
             self.data[key] = value_list
-            
-    
-    def search(self, search_key):
-        # print('Search key', search_key)
-        
-        if search_key in self.data:
-            return self.data[search_key]
-        else:
-            # print('Not found')
-            print(self.data)
-            return None
-        
+
+
 #Class represents the actual Node, it stores ip and port of a node       
 class NodeInfo:
     def __init__(self, ip, port):
@@ -94,15 +84,6 @@ class Node:
             value = data[1]
             self.data_store.insert(key, value)
             result = 'Inserted'
-
-            '''#Backup insert
-            predecessor = self.get_predecessor()
-            while predecessor == "None":
-                time.sleep(15)
-                predecessor = self.get_predecessor()
-            ip, port = self.get_ip_port(self.get_predecessor())
-            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(value) )'''
-
 
         if operation == 'insert_backup':
             data = message.split('|')[1].split(":") 
@@ -154,7 +135,6 @@ class Node:
             result = self.search_key(data)
         
     
-        
         if operation == "join_request":
             # print("join request recv")
             result  = self.join_request_from_other_node(int(args[0]))
