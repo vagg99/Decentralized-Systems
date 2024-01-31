@@ -247,9 +247,6 @@ class Node:
             return
         ip, port = self.get_ip_port(self.get_predecessor())
 
-        check = self.request_handler.send_message(ip,port,"check_backup|")
-        print("port: ", self.port, "| check_status: ", check)
-
         temp = self.data_store.data
         
         for key in temp:
