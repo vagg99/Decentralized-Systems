@@ -204,8 +204,8 @@ response = requests.get(url)
 # Get the directory of the current script
 current_directory = os.path.dirname(os.path.abspath(__file__))
 output_directory = os.path.join(current_directory, "..", "Text-Outputs")
-output_file_path = os.path.join(output_directory, "final_scientist_info.txt")
-output_json_path = os.path.join(output_directory, "final_scientist_info.json")  # JSON file path
+output_file_path = os.path.join(output_directory, "scientist_info.txt")
+output_json_path = os.path.join(output_directory, "scientist_info.json")  # JSON file path
 education_keywords = ["B.S.", "BSc", "B.Sc.", "BA", "SB", "S.B."]
 
 if response.status_code == 200:
@@ -218,7 +218,7 @@ if response.status_code == 200:
         current_letter = ""
         error_count = 0
         scientists_count = 0
-        failed_entries_file = os.path.join(output_directory, "failed_entries.txt")
+        failed_entries_file = os.path.join(output_directory, "failed_entries_scientist_info.txt")
         failed_entries = []
         failed_entries_count = 0
 
@@ -228,7 +228,7 @@ if response.status_code == 200:
                 if section_title and section_title.text.isalpha() and len(section_title.text) == 1:
                     inside_valid_section = True
                     current_letter = section_title.text
-                    info_file.write("--------------------------\n> Surnames under letter: " + current_letter + "\n--------------------------\n\n" )  
+                    #info_file.write("--------------------------\n> Surnames under letter: " + current_letter + "\n--------------------------\n\n" )  
 
                 else:
                     inside_valid_section = False
@@ -256,7 +256,9 @@ if response.status_code == 200:
                                     failed_entries_count += 1
                                     continue
 
-                                info_file.write(f"Surname: {surname}\nAwards: {awards_count}\nEducation: {education_text}\n\n")
+                                # each scientist's info is written to the file, adding three lines of useful information
+                                # per scientist: Surname, Awards and Education
+                                info_file.write(f"Surname: {surname}\nAwards: {awards_count}\nEducation: {education_text}\n") 
                                 scientists_count += 1
 
                                 # Collect scientist info in a dictionary
