@@ -278,8 +278,14 @@ if response.status_code == 200:
                             error_count += 1
                             print(f"{error_count}) An error occurred while processing {scientist_url}: {str(e)}")
 
-        info_file.write(f"\nTotal Scientists Included: {scientists_count}\n")
-        info_file.write(f"{error_count} scientists excluded from the final list, due to not meeting the data criteria\n")
+        # -- Message to be written at the end of the file REMOVED --
+        #
+        #info_file.write(f"\nTotal Scientists Included: {scientists_count}\n")
+        #info_file.write(f"{error_count} scientists excluded from the final list, due to not meeting the data criteria\n")
+
+        # after the final entry remove the last line break 
+        info_file.seek(info_file.tell() - 1)
+
 
         # Write failed entries to a new file
         with open(failed_entries_file, "w", encoding="utf-8") as failed_file:
