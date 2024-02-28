@@ -251,13 +251,21 @@ class Node:
         
         for key in temp:
             # print("key: ", str(key), ", val: ", str(self.data_store.data[key]), "pred_ip: ",ip, ", pred_port: ", port)
-            self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(temp[key]) )
+            if temp[key].count(',') == 0:  # if multiple values for the specific key
+                for entry in temp[key]:
+                    self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(entry))
+            else:    
+                self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(temp[key]))
 
     def restore_backup(self):
         ip, port = self.get_ip_port(self.get_successor())
 
         for key in self.backup_data_store.data:
-            self.request_handler.send_message(ip,port,"insert_server|" + str(key) + ":" + str(self.backup_data_store.data[key]))
+            if self.backup_data_store.data[key].count(',') == 0:  # if multiple values for the specific key
+                for entry in self.backup_data_store.data[key]:
+                    self.request_handler.send_message(ip,port,"insert_backup|" + str(key) + ":" + str(entry))
+            else:    
+                self.request_handler.send_message(ip,port,"insert_server|" + str(key) + ":" + str(self.backup_data_store.data[key]))
     
     def join_request_from_other_node(self, node_id):
         """ will return successor for the node who is requesting to join """
